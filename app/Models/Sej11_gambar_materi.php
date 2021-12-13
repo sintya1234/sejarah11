@@ -11,4 +11,9 @@ class Sej11_gambar_materi extends Model
     protected $guarded = ['id'];
 
     //bissaaa plisss
+
+    public function sej11_levels()
+    {
+        return $this->belongsToMany(sej11_level::class);
+    }
 }

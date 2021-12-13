@@ -31,5 +31,10 @@ class Sej11_Level extends Model
         return $this->hasMany(sej11_soal::class);
     }
 
+    public function sej11_gambar_materis()
+    {
+        return $this->belongsToMany(sej11_gambar_materi::class);
+    }
+
     //ini leveeellll modeeeeelllll
 }

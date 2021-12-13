@@ -30,4 +30,6 @@ class Sej11_Level extends Model
     {
         return $this->hasMany(sej11_soal::class);
     }
+
+    //ini leveeellll modeeeeelllll
 }

@@ -9,4 +9,6 @@ class Sej11_gambar_materi extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    //bissaaa plisss
 }

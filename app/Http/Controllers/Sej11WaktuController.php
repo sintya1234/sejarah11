@@ -15,7 +15,7 @@ class Sej11WaktuController extends Controller
      */
     public function index()
     {
-        //
+        //ini waktu controller
     }
 
     /**

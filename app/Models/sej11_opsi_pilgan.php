@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\Sej11OpsiPilganFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,5 +14,9 @@ class sej11_opsi_pilgan extends Model
     public function sej11_soal()
     {
         return $this->belongsTo(sej11_soal::class);
+    }
+
+    protected static function newFactory(){
+        return Sej11OpsiPilganFactory::new();
     }
 }

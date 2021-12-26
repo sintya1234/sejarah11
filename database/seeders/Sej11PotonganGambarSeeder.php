@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\sej11_potongan_gambar;
 
 class Sej11PotonganGambarSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class Sej11PotonganGambarSeeder extends Seeder
      */
     public function run()
     {
-        //
+        sej11_potongan_gambar::factory()
+        ->count(3)
+        ->create();
     }
 }

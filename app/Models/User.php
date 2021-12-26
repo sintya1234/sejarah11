@@ -24,6 +24,10 @@ class User extends Authenticatable
         'school',
         'city',
         'birthyear',
+        'created_at',
+        'email_verified_at',
+        'is_login',
+        'is_active'
     ];
 
     /**

@@ -13,7 +13,7 @@ class CreateSej11LeaderboardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sej11__leaderboards', function (Blueprint $table) {
+        Schema::create('sej11_leaderboards', function (Blueprint $table) {
             $table->id();
             $table->foreignId('peringkat');
             $table->bigInteger('total_skor');

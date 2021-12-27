@@ -17,12 +17,12 @@
 
 <body>
 
-    @include('partials.navbar');
-
+    @include('partials.navbar')
+   
     <div class="container mt-4">
         @yield('container')
     </div>
-
+    @include('partials.footer')
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

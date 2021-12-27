@@ -6,11 +6,11 @@
 </figure>
 
 
-<div class="d-grid gap-2 mb-3 mx-auto">
+{{-- <div class="d-grid gap-2 mb-3 mx-auto">
     <button type="button" class="btn btn-outline-secondary">LOGIN</button>
 </div>
 <div class="d-grid gap-2 mb-3 mx-auto">
     <button type="button" class="btn btn-outline-info">REGISTER</button>
-</div>
+</div> --}}
 
 @endsection

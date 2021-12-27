@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\Sej11LevelFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,10 +11,10 @@ class Sej11_Level extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_link_youtube',
-        'gambar utuh',
+        'sej11_link_youtube_id',
+        'gambar_utuh',
         'judul_sub_bab',
-        'Materi',
+        'materi',
     ];
 
     public function sej11_user_levels()
@@ -34,6 +35,10 @@ class Sej11_Level extends Model
     public function sej11_gambar_materis()
     {
         return $this->belongsToMany(sej11_gambar_materi::class);
+    }
+
+    protected static function newFactory(){
+        return Sej11LevelFactory::new();
     }
 
     //ini leveeellll modeeeeelllll

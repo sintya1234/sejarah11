@@ -3,9 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\sej11_waktu;
 
 class Sej11WaktuSeeder extends Seeder
 {
+    
     /**
      * Run the database seeds.
      *
@@ -13,6 +15,8 @@ class Sej11WaktuSeeder extends Seeder
      */
     public function run()
     {
-        //
+        sej11_waktu::factory()
+        ->count(3)
+        ->create();
     }
 }

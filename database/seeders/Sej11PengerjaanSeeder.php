@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\sej11_pengerjaan;
 
 class Sej11PengerjaanSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class Sej11PengerjaanSeeder extends Seeder
      */
     public function run()
     {
-        //
+        sej11_pengerjaan::factory()
+        ->count(3)
+        ->create();
     }
 }

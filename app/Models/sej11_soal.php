@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\Sej11SoalFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,7 +10,6 @@ class sej11_soal extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
-    
 
     public function sej11_level()
     {
@@ -29,6 +29,10 @@ class sej11_soal extends Model
     public function sej11_opsi_isian()
     {
         return $this->belongsTo(sej11_opsi_pilgan::class);
+    }
+
+    protected static function newFactory(){
+        return Sej11SoalFactory::new();
     }
 
 }

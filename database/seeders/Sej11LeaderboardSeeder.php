@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Sej11_Leaderboard;
 
 class Sej11LeaderboardSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class Sej11LeaderboardSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Sej11_Leaderboard::factory()
+        ->count(3)
+        ->create();
     }
 }

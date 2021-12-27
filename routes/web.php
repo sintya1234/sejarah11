@@ -28,3 +28,6 @@ Route::get('/register', function () {
 Route::get('/afterlogin', function () {
     return view('menu/afterlogin');
 });
+Route::get('/beforelogin', function () {
+    return view('menu/beforelogin');
+});

@@ -77,7 +77,7 @@ class LoginController extends Controller
             'refresh_token' => 'required'
         ]);
 
-        $response = Http::asForm()->post('http://webapi.test/oauth/token', [
+        $response = Http::asForm()->post('http://127.0.0.1:8000/oauth/token', [
             'grant_type' => 'refresh_token',
             'refresh_token' => $request->refresh_token,
             'client_id' => $this->client->id,

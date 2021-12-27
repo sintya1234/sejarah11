@@ -18,8 +18,14 @@ use Illuminate\Support\Facades\Route;
 */
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'login']);
+Route::post('refresh', [LoginController::class, 'refresh']);
 
-Route::apiResource('users', userController::class);
+Route::group(['middleware' => 'auth:api'], function () {
+    Route::apiResource('users', userController::class);
+    Route::post('logout', [LoginController::class, 'logout']);
+});
+
+
 
 
 

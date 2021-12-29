@@ -20,11 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'login']);
 Route::post('refresh', [LoginController::class, 'refresh']);
-Route::apiResource('sej11_levels', Sej11_levelController::class);
+
 
 Route::group(['middleware' => 'auth:api'], function () {
-    Route::apiResource('users', userController::class);
-   
+    Route::apiResource('users', userController::class); 
+    Route::apiResource('sej11_levels', Sej11_levelController::class);
     Route::post('logout', [LoginController::class, 'logout']);
 });
 

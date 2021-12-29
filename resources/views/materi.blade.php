@@ -7,8 +7,6 @@
         <div class="col-mb-3">
             <h1 class="mb-3">{{ $sej11_level->judul_sub_bab }}</h1>
 
-          {{--   <img src="{{ $sej11_level->gambar_utuh }}/1200x400?" alt="" class="img-fluid">--}}
-
             <img src="{{ $sej11_level->gambar_utuh }}"
             class="card-img-top" alt="..." class="card-img-top" alt="...">
 

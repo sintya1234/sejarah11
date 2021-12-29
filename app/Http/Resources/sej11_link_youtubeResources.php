@@ -16,6 +16,7 @@ class sej11_link_youtubeResources extends JsonResource
     {
         return[
             'id'=> $this->id,
+            'sej11__level_id'=> $this->sej11__level_id,
             'link_youtube'=>$this->link_youtube,
             ];
     }

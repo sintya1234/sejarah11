@@ -15,7 +15,7 @@ class Sej11_gambar_materi extends Model
 
     public function sej11_levels()
     {
-        return $this->belongsToMany(sej11_level::class);
+        return $this->belongsTo(sej11_level::class);
     }
 
     protected static function newFactory(){

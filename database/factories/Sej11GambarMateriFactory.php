@@ -17,7 +17,8 @@ class Sej11GambarMateriFactory extends Factory
     public function definition()
     {
         return [
-            'gambar_materi' => Str::random(2),
+            'sej11__level_id' => mt_rand(1, 10),
+            'gambar_materi' =>$this->faker->sentence(mt_rand(2, 8)),
         ];
     }
 }

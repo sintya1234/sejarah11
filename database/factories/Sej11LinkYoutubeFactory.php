@@ -22,6 +22,7 @@ class Sej11LinkYoutubeFactory extends Factory
     {
         return [
             'link_youtube' => $this->faker->sentence(mt_rand(2, 8)),
+            'sej11__level_id' => mt_rand(1, 10),
         ];
     }
 }

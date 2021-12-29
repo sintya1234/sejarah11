@@ -15,8 +15,8 @@ class Sej11WaktuSeeder extends Seeder
      */
     public function run()
     {
-        sej11_waktu::factory()
-        ->count(3)
-        ->create();
+        // sej11_waktu::factory()
+        // ->count(3)
+        // ->create();
     }
 }

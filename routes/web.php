@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Sej11LevelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register/index');
 });
+
+Route::get('/kumpulan-materi', [Sej11LevelController::class, 'index']);
+Route::get('/kumpulan-materi/{sej11_Level}', [Sej11LevelController::class, 'show']);
+

@@ -14,8 +14,8 @@ class Sej11UserLevelSeeder extends Seeder
      */
     public function run()
     {
-        sej11_user_level::factory()
-        ->count(3)
-        ->create();
+        // sej11_user_level::factory()
+        // ->count(3)
+        // ->create();
     }
 }

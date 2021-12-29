@@ -14,8 +14,8 @@ class Sej11LeaderboardSeeder extends Seeder
      */
     public function run()
     {
-        Sej11_Leaderboard::factory()
-        ->count(3)
-        ->create();
+        // Sej11_Leaderboard::factory()
+        // ->count(3)
+        // ->create();
     }
 }

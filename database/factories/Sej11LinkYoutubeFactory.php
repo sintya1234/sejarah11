@@ -21,7 +21,7 @@ class Sej11LinkYoutubeFactory extends Factory
     public function definition()
     {
         return [
-            'link_youtube' => Str::random(11),
+            'link_youtube' => $this->faker->sentence(mt_rand(2, 8)),
         ];
     }
 }

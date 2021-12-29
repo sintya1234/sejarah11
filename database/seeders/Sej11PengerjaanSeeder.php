@@ -14,8 +14,8 @@ class Sej11PengerjaanSeeder extends Seeder
      */
     public function run()
     {
-        sej11_pengerjaan::factory()
-        ->count(3)
-        ->create();
+        // sej11_pengerjaan::factory()
+        // ->count(3)
+        // ->create();
     }
 }

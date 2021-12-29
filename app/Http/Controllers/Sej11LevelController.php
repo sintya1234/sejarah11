@@ -15,7 +15,9 @@ class Sej11LevelController extends Controller
      */
     public function index()
     {
-        //
+        return view('/materis', [
+            'sej11_level' => Sej11_Level::all()
+        ]);
     }
 
     /**
@@ -47,7 +49,9 @@ class Sej11LevelController extends Controller
      */
     public function show(Sej11_Level $sej11_Level)
     {
-        //
+        return view('/materi', [
+            "sej11_level" => $sej11_Level
+        ]);
     }
 
     /**

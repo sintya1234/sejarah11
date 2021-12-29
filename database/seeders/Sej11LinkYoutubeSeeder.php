@@ -14,8 +14,8 @@ class Sej11LinkYoutubeSeeder extends Seeder
      */
     public function run()
     {
-        Sej11_link_youtube::factory()
-        ->count(3)
-        ->create();
+        // Sej11_link_youtube::factory()
+        // ->count(3)
+        // ->create();
     }
 }

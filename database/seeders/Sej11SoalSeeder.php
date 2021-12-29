@@ -14,8 +14,9 @@ class Sej11SoalSeeder extends Seeder
      */
     public function run()
     {
-        sej11_soal::factory()
-        ->count(3)
-        ->create();
+    //     sej11_soal::factory()
+    //     ->count(3)
+    //     ->create();
+    // }
     }
 }

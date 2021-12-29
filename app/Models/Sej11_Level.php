@@ -11,7 +11,7 @@ class Sej11_Level extends Model
     use HasFactory;
 
     protected $fillable = [
-        'sej11_link_youtube_id',
+      //  'sej11_link_youtube_id',
         'gambar_utuh',
         'judul_sub_bab',
         'materi',

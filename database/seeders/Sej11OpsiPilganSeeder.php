@@ -14,8 +14,8 @@ class Sej11OpsiPilganSeeder extends Seeder
      */
     public function run()
     {
-        sej11_opsi_pilgan::factory()
-        ->count(3)
-        ->create();
+        // sej11_opsi_pilgan::factory()
+        // ->count(3)
+        // ->create();
     }
 }

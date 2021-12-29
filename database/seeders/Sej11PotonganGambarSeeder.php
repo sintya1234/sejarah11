@@ -14,8 +14,8 @@ class Sej11PotonganGambarSeeder extends Seeder
      */
     public function run()
     {
-        sej11_potongan_gambar::factory()
-        ->count(3)
-        ->create();
+        // sej11_potongan_gambar::factory()
+        // ->count(3)
+        // ->create();
     }
 }

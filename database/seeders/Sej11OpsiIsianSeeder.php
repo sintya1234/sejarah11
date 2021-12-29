@@ -14,8 +14,8 @@ class Sej11OpsiIsianSeeder extends Seeder
      */
     public function run()
     {
-        sej11_opsi_isian::factory()
-        ->count(3)
-        ->create();
+        // sej11_opsi_isian::factory()
+        // ->count(3)
+        // ->create();
     }
 }

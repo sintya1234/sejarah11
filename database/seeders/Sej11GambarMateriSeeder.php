@@ -14,8 +14,8 @@ class Sej11GambarMateriSeeder extends Seeder
      */
     public function run()
     {
-        Sej11_gambar_materi::factory()
-        ->count(3)
-        ->create();
+        // Sej11_gambar_materi::factory()
+        // ->count(3)
+        // ->create();
     }
 }

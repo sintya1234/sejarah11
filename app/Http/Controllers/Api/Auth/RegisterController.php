@@ -14,6 +14,7 @@ class RegisterController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
+            'username' => 'required|min:3|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
             'school'=>'required|string',
             'city'=>'required|string',
@@ -45,6 +46,9 @@ class RegisterController extends Controller
                 'created_at'=>\Carbon\Carbon::now(),
                 'email_verified_at'=> \Carbon\Carbon::now()
             ]);
+        }
+        public function index(){
+            return view('register.index');
         }
     }
 

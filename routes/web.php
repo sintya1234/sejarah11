@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Sej11LevelController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login/index');
-});
+Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index']);
+
 
 Route::get('/register', function () {
     return view('register/index');

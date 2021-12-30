@@ -94,21 +94,6 @@
                         @enderror
                     </div>
 
-
-                    <div class="form-floating">
-                        <input type="password" name="password"
-                            class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password"
-                            placeholder="Password" required value="{{ old('password') }}">
-                        <label for="password">Foto</label>
-                        @error('password')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
-
-
-
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
 
                 </form>

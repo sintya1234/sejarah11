@@ -109,4 +109,8 @@ class LoginController extends Controller
             'message' => 'Logged out'
         ]);
     }
+
+    public function index(){
+        return view('login.index');
+    }
 }

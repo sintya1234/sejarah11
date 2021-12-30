@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'sintya tri wahyu adityawati',
             'email' => 'sintya.tia2704@gmail.com',
+            'username' => 'Sintya_tetapSemanagat',
             'password' => bcrypt('password'),
             'school'=>'SMA 1 Tarakan',
             'birthyear'=>'2001',
@@ -30,6 +31,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'david',
             'email' => 'david@gmail.com',
+            'username' => 'davidKeren',
             'password' => bcrypt('password'),
             'school'=>'SMA 1 Surabaya',
             'birthyear'=>'2002',
@@ -39,6 +41,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'wanto',
             'email' => 'wanto@gmail.com',
+            'username' => 'wantoKeren',
             'password' => bcrypt('password'),
             'school'=>'SMA 1 Surabaya',
             'birthyear'=>'2002',
@@ -48,12 +51,14 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'lia',
             'email' => 'lia@gmail.com',
+            'username' => 'liaCantik',
             'password' => bcrypt('password'),
             'school'=>'SMA 1 lamongan',
             'birthyear'=>'2002',
             'city'=>'lamongan',
         ]);
 
+        User::factory(5)->create();
         Sej11_link_youtube::factory(3)->create();
         Sej11_Level::factory(10)->create();
 

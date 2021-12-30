@@ -21,9 +21,10 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class,'loginWeb']);
 
 Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register', [RegisterController::class,'register']);
+Route::post('/register', [RegisterController::class,'storeWeb']);
 
 Route::get('/kumpulan-materi', [Sej11LevelController::class, 'index']);
 Route::get('/kumpulan-materi/{sej11_Level}', [Sej11LevelController::class, 'show']);

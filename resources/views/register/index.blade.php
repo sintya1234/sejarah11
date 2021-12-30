@@ -56,7 +56,7 @@
 
                     <div class="form-floating">
                         <input type="password" name="password_confirmation"
-                            class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password_confirmation"
+                            class="form-control rounded-bottom @error('password_confirmation') is-invalid @enderror" id="password_confirmation"
                             placeholder="password_confirmation" required value="{{ old('password_confirmation') }}">
                         <label for="password_confirmation">password confirmation</label>
                         @error('password_confirmation')
@@ -69,10 +69,10 @@
 
                     <div class="form-floating">
                         <input type="text" name="school"
-                            class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password"
-                            placeholder="school" required value="{{ old('password') }}">
+                            class="form-control rounded-bottom @error('school') is-invalid @enderror" id="school"
+                            placeholder="school" required value="{{ old('school') }}">
                         <label for="school">School</label>
-                        @error('password')
+                        @error('school')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>

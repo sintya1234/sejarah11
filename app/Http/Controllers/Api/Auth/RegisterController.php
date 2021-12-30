@@ -53,5 +53,30 @@ class RegisterController extends Controller
                 'title'=>'Register'
             ]);
         }
+
+
+
+        public function storeWeb(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'username' => 'required|min:3|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+            'school'=>'required|string',
+            'city'=>'required|string',
+            'birthyear'=>'required|string',
+        ]);
+
+        $user = $this->newUser($request->all());
+    
+        if(empty($user)){
+            return response([
+                'massage'=>'Failed to create account'
+            ]);    
+        }else{
+                 return redirect('/login')->with('success', 'Registration successfuul !! please login');
+        }
+    }
     }
 

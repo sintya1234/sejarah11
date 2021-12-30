@@ -110,7 +110,61 @@ class LoginController extends Controller
         ]);
     }
 
-    public function index(){
+    //di bawah ini function untuk web
+
+    public function index()
+    {
         return view('login.index');
+    }
+
+    public function loginWeb(Request $request)
+    {
+        $user = [
+            'email' => $request->email,
+            'password' => $request->password,
+            'role' => '1',
+            'is_login' => '0',
+            'is_active' => '1'
+        ];
+
+        $check = DB::table('users')->where('email', $request->email)->first();
+
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            if ($check->is_active == '1') {
+                if ($check->is_login == '0') {
+                    if (Auth::attempt($user)) {
+                        $this->isLogin(Auth::id());
+
+                        $request->session()->regenerate();
+                        return redirect()->intended('/kumpulan-materi');
+                        //untuk generete token
+                        // $response = Http::asForm()->post('http://127.0.0.1:8000/oauth/token', [
+                        //     'grant_type' => 'password',
+                        //     'client_id' => $this->client->id,
+                        //     'client_secret' => $this->client->secret,
+                        //     'username' => $request->email,
+                        //     'password' => $request->password,
+                        //     'scope' => '*',
+                        // ]);
+
+                        // return $response->json();
+                    } else {
+                        return back()->with('loginError', 'Login failed');
+                    }
+                } else {
+                    $request->session()->regenerate();
+                    return redirect()->intended('/kumpulan-materi');
+                }
+            } else {
+                return back()->with('loginError', 'Login failed');
+            }
+        } else {
+            return back()->with('loginError', 'Login failed');
+        }
     }
 }

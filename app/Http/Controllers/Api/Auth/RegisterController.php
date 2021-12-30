@@ -38,6 +38,7 @@ class RegisterController extends Controller
             return User::create([
                 'name' =>$data['name'],
                 'email' => $data['email'],
+                'username' => $data['username'],
                 'password' => Hash::make($data['password']),
                 'school'=>$data['school'],
                 'city'=>$data['city'],
@@ -48,7 +49,9 @@ class RegisterController extends Controller
             ]);
         }
         public function index(){
-            return view('register.index');
+            return view('register.index', [
+                'title'=>'Register'
+            ]);
         }
     }
 

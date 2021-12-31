@@ -11,6 +11,9 @@
                     <a class="nav-link " href="/home">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link " href="/menu">Menu</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link " href="/kumpulan-materi">Baca materi</a>
                 </li>
                 <li class="nav-item">
@@ -18,22 +21,41 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link "
-                        href="/profil">profil </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link "
                         href="/lederboard">Leaderboard</a>
                 </li>
             </ul>
             <ul class="navbar- nav ms-auto">
-               
+                @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Wecome Back, {{ auth()->user()->name }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/profile">My profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+
+                        </ul>
+                    </li>
+                @else
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a href="/login" class="nav-link"><i
                                     class="bi bi-box-arrow-in-right"></i>Login</a>
                         </li>
                     </ul>
+                @endauth
             </ul>
+
+
         </div>
     </div>
 </nav>

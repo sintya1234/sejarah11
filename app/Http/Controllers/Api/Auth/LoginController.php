@@ -141,9 +141,9 @@ class LoginController extends Controller
                         $this->isLogin(Auth::id());
 
                         $request->session()->regenerate();
-                        return redirect()->intended('/kumpulan-materi');
+                        return redirect()->intended('/menu');
                         //untuk generete token
-                        // $response = Http::asForm()->post('http://127.0.0.1:8000/oauth/token', [
+                        // Http::asForm()->post('http://127.0.0.1:8000/oauth/token', [
                         //     'grant_type' => 'password',
                         //     'client_id' => $this->client->id,
                         //     'client_secret' => $this->client->secret,
@@ -152,13 +152,13 @@ class LoginController extends Controller
                         //     'scope' => '*',
                         // ]);
 
-                        // return $response->json();
+                      
                     } else {
                         return back()->with('loginError', 'Login failed');
                     }
                 } else {
                     $request->session()->regenerate();
-                    return redirect()->intended('/kumpulan-materi');
+                    return redirect()->intended('/menu');
                 }
             } else {
                 return back()->with('loginError', 'Login failed');
@@ -166,5 +166,31 @@ class LoginController extends Controller
         } else {
             return back()->with('loginError', 'Login failed');
         }
+    }
+
+
+    public function logoutWeb(Request $request)
+    {
+        /** @var \App\Models\User $user */
+         $user = Auth::user();
+        // $accessToken = Auth::user()->token();
+        // DB::table('oauth_refresh_tokens')
+        //     ->where('access_token_id', $accessToken->id)
+        //     ->update([
+        //         'revoked' => true
+        //     ]);
+        $user->update([
+            'is_login' => '0'
+        ]);
+        
+        Auth::logout();
+
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+       // $accessToken->revoke();
+
+        return view('login.index');
     }
 }

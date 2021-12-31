@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Sej11LevelController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [LoginController::class, 'index']);
+//->middleware('guest');
 Route::post('/login', [LoginController::class,'loginWeb']);
 
 Route::get('/register', [RegisterController::class, 'index']);
@@ -28,4 +30,16 @@ Route::post('/register', [RegisterController::class,'storeWeb']);
 
 Route::get('/kumpulan-materi', [Sej11LevelController::class, 'index']);
 Route::get('/kumpulan-materi/{sej11_Level}', [Sej11LevelController::class, 'show']);
+
+Route::get('/menu', function () {
+    return view('/menu/index');
+});
+
+Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth');
+
+Route::get('/profile', [UserController::class, 'show']);
+
+Route::get('/profile/edit', function () {
+    return view('/profile/edit');
+});
 

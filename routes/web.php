@@ -43,3 +43,10 @@ Route::get('/profile/edit', function () {
     return view('/profile/edit');
 });
 
+Route::get('/afterlogin', function () {
+     return view('menu/afterlogin');
+ });
+ Route::get('/beforelogin', function () {
+     return view('menu/beforelogin');
+ });
+  

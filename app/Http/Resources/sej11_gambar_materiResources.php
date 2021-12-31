@@ -16,6 +16,7 @@ class sej11_gambar_materiResources extends JsonResource
     {
         return[
             'id'=> $this->id,
+            'sej11__level_id'=> $this->sej11__level_id,
             'gambar_materi'=>$this->gambar_materi,
             ];
     }

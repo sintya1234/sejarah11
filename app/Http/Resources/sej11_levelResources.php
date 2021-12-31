@@ -16,7 +16,6 @@ class sej11_levelResources extends JsonResource
     {
         return[
             'id'=> $this->id,
-            'sej11_link_youtube_id'=>$this->sej11_link_youtube_id,
             'gambar_utuh'=>$this->gambar_utuh,
             'judul_sub_bab'=>$this->judul_sub_bab,
             'materi'=>$this->materi,

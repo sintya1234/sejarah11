@@ -14,9 +14,8 @@ class CreateSej11LevelsTable extends Migration
     public function up()
     {
         //level up
-        Schema::create('sej11_levels', function (Blueprint $table) {
+        Schema::create('sej11__levels', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('sej11_link_youtube_id');
             $table->string('gambar_utuh');
             $table->string('judul_sub_bab');
             $table->Text('materi');

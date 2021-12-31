@@ -15,6 +15,7 @@ class CreateSej11LinkYoutubesTable extends Migration
     {
         Schema::create('sej11_link_youtubes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('sej11__level_id');
             $table->string('link_youtube');
             $table->timestamps();
         });

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Auth\LoginController;
+use App\Http\Controllers\Api\Sej11_levelController;
 use App\Http\Controllers\Api\userController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -18,9 +19,14 @@ use Illuminate\Support\Facades\Route;
 */
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'login']);
+Route::post('refresh', [LoginController::class, 'refresh']);
 
-Route::apiResource('users', userController::class);
 
+Route::group(['middleware' => 'auth:api'], function () {
+    Route::apiResource('users', userController::class); 
+    Route::apiResource('sej11_levels', Sej11_levelController::class);
+    Route::post('logout', [LoginController::class, 'logout']);
+});
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

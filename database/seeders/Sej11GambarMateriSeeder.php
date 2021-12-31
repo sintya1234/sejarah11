@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Sej11_gambar_materi;
 
 class Sej11GambarMateriSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class Sej11GambarMateriSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // Sej11_gambar_materi::factory()
+        // ->count(3)
+        // ->create();
     }
 }

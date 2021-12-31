@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\Sej11UserLevelFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,10 +11,10 @@ class sej11_user_level extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_students',
-        'id_level',
+        'user_id',
+        'sej11_level_id',
         'score',
-        'Waktu_pengerjaan',
+        'waktu_pengerjaan',
     ];
 
     public function user()
@@ -29,6 +30,10 @@ class sej11_user_level extends Model
     public function sej11_pengerjaans()
     {
         return $this->hasMany(sej11_level::class);
+    }
+
+    protected static function newFactory(){
+        return Sej11UserLevelFactory::new();
     }
 
     

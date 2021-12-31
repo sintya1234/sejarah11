@@ -28,7 +28,14 @@ class Sej11_levelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Sej11_Level::create([
+            'id' => $request->id,
+            'gambar_utuh' => $request->gambar_utuh,
+            'judul_sub_bab' => $request->judul_sub_bab,
+            'materi' => $request->materi
+        ]);
+        return ['message' => 'Data has been saved'];
+ 
     }
 
     /**
@@ -39,7 +46,8 @@ class Sej11_levelController extends Controller
      */
     public function show($id)
     {
-        //
+        $Sej11_Level = Sej11_Level::all()->where('id', $id);
+        return ['Sej11_Levels' => sej11_levelResources::collection($Sej11_Level)];
     }
 
     /**
@@ -51,7 +59,15 @@ class Sej11_levelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Sej11_Level = Sej11_Level::findOrFail($id);
+        $Sej11_Level->update([
+           'gambar_utuh'=>$request->gambar_utuh,
+            'judul_sub_bab'=>$request->judul_sub_bab,
+            'materi'=>$request->materi,
+        ]);
+
+        return ['message' => 'Data has been updated'];
+
     }
 
     /**
@@ -62,6 +78,8 @@ class Sej11_levelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Sej11_Level = Sej11_Level::findOrFail($id);
+        $Sej11_Level->delete();
+        return ['message' => 'Data has been deleted'];
     }
 }

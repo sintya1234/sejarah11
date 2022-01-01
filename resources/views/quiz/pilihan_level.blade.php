@@ -13,7 +13,7 @@
                 <td>Level: {{ $loop->iteration }}</td>
                 <td>{{ $level->judul_sub_bab }}</td>
                 @if ($loop->first)
-                <td> <a href="/quiz/"><button type="button" class="btn btn-secondary">play</button></a></td>
+                <td> <a href="/quiz/{{ $level->id }}"><button type="button" class="btn btn-secondary">play</button></a></td>
                 @else
                 <td>terkunci</td>
                 @endif

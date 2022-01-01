@@ -3,8 +3,9 @@
 
 {{-- <<<<<<< HEAD --}}
 <div class="d-grid gap-2 mb-3 rowmx-auto">
-    <button type="button" class="btn btn-outline-danger">Quiz</button>
+    <a href="/quiz" class="btn btn-outline-danger">Quiz</a>
 </div>
+
 <div class="d-grid gap-2 mb-3 mx-auto">
     {{-- <button type="button" ></button> --}}
     <a href="/kumpulan-materi" class="btn btn-outline-warning">Baca Materi</a>

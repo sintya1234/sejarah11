@@ -14,7 +14,7 @@
 <h3>birthyear: {{auth()->user()->city}}</h3> --}}
 
 <div class="col-lg-8">
-    <form method="post" action="/dashboard/posts/{{ $post->slug }}" class="mb-5">
+    <form method="post" action="/profile/edit" class="mb-5">
         {{-- ost-ost-">postkepostdikebungmasukkes --}}
         @method('put')
         @csrf

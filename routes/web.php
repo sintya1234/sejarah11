@@ -36,6 +36,7 @@ Route::get('/menu', function () {
 });
 
 Route::get('/quiz', [Sej11LevelController::class, 'quiz_index']);
+Route::get('/quiz/{sej11_Level}', [Sej11LevelController::class, 'menu_play_show']);
 
 Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth');
 

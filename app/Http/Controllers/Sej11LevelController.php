@@ -93,4 +93,11 @@ class Sej11LevelController extends Controller
             'sej11_level' => Sej11_Level::all()
         ]);
     }
+
+    public function menu_play_show(Sej11_Level $sej11_Level)
+    {
+        return view('quiz/menu_play', [
+            "sej11_level" => $sej11_Level
+        ]);
+    }
 }

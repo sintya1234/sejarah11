@@ -87,4 +87,10 @@ class Sej11LevelController extends Controller
     {
         //
     }
+
+    public function quiz_index(){
+        return view('/quiz/pilihan_level', [
+            'sej11_level' => Sej11_Level::all()
+        ]);
+    }
 }

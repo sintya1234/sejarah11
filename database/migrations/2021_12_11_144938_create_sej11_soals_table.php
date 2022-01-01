@@ -15,9 +15,10 @@ class CreateSej11SoalsTable extends Migration
     {
         Schema::create('sej11_soals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('sej11_level_id');
+            $table->foreignId('sej11__level_id');
             $table->foreignId('sej11_waktu_id');
             $table->foreignId('gambar_materi_id')->nullable();
+            $table->String('soal');
             $table->integer('jenis_soal')->default(0);
             $table->timestamps();
         });

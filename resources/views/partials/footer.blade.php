@@ -1,4 +1,4 @@
-<footer id="footer" class="bg-danger mb-0">
+{{-- <footer id="footer" class="bg-danger mb-0">
     <div class="main-footer widgets-dark typo-light">
     <div class="container">
     <div class="row">
@@ -66,4 +66,4 @@
     </div>
     </div>
     </div>
-    </footer>
+    </footer> --}}

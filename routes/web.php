@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
+use App\Http\Controllers\Api\sej11_soalController;
 use App\Http\Controllers\Sej11LevelController;
+use App\Http\Controllers\Sej11SoalController;
 use App\Http\Controllers\UserController;
+use App\Models\sej11_soal;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,10 +41,11 @@ Route::get('/menu', function () {
 Route::get('/quiz', [Sej11LevelController::class, 'quiz_index']);
 Route::get('/quiz/{sej11_Level}', [Sej11LevelController::class, 'menu_play_show']);
 
+Route::get('/quiz/{sej11_Level}/soal1', [Sej11LevelController::class, 'quiz_soal_show']);
+
 Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth');
 
 Route::get('/profile', [UserController::class, 'show']);
-
 Route::get('/profile/edit', function () {
     return view('/profile/edit');
 });

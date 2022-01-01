@@ -5,7 +5,7 @@
 <h1>Tema quiz: {{ $sej11_level->judul_sub_bab }}</h1>
 
 <div class="d-grid gap-2 mb-3 rowmx-auto">
-    <button type="button" class="btn btn-outline-danger">Play</button>
+    <a href="/quiz/{{$sej11_level->id}}/soal1" class="btn btn-outline-danger">Start</a>
 </div>
 <div class="d-grid gap-2 mb-3 mx-auto">
     {{-- <button type="button" ></button> --}}

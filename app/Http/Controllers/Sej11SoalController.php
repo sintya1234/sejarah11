@@ -47,7 +47,7 @@ class Sej11SoalController extends Controller
      */
     public function show(sej11_soal $sej11_soal)
     {
-        //
+       
     }
 
     /**

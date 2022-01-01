@@ -13,7 +13,7 @@ class sej11_soal extends Model
 
     public function sej11_level()
     {
-        return $this->belongsTo(sej11_level::class);
+        return $this->belongsTo(Sej11_level::class);
     }
 
     public function sej11_waktu()

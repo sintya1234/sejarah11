@@ -100,4 +100,11 @@ class Sej11LevelController extends Controller
             "sej11_level" => $sej11_Level
         ]);
     }
+
+    public function quiz_soal_show(Sej11_Level $sej11_Level)
+    {
+        return view('quiz/soal/soal1', [
+            "sej11_level" => $sej11_Level
+        ]);
+    }
 }

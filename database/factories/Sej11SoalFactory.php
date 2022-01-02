@@ -15,11 +15,11 @@ class Sej11SoalFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'sej11__level_id' => mt_rand(1, 10),
-            'sej11_waktu_id' => mt_rand(1, 10),
-            'gambar_materi_id'=> mt_rand(1, 10),
-            'jenis_soal'=> mt_rand(1, 3),
-        ];
+        // return [
+        //     'sej11__level_id' => mt_rand(1, 10),
+        //     'sej11_waktu_id' => mt_rand(1, 10),
+        //     'gambar_materi_id'=> mt_rand(1, 10),
+        //     'jenis_soal'=> mt_rand(1, 3),
+        // ];
     }
 }

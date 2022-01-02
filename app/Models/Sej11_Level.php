@@ -26,10 +26,10 @@ class Sej11_Level extends Model
     {
         return $this->hasMany(sej11_link_youtube::class);
     }
-
+//fokus ini
     public function sej11_soals()
     {
-        return $this->hasMany(sej11_soal::class);
+        return $this->hasMany(Sej11_soal::class,'sej11__level_id','id');
     }
 
     public function sej11_gambar_materis()

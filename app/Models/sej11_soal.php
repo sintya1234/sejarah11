@@ -6,14 +6,14 @@ use Database\Factories\Sej11SoalFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class sej11_soal extends Model
+class Sej11_soal extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
 
-    public function sej11_level()
+    public function sej11_levels()
     {
-        return $this->belongsTo(Sej11_level::class);
+        return $this->belongsTo(Sej11_level::class,'sej11__level_id','id');
     }
 
     public function sej11_waktu()

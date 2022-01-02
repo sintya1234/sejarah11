@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     public function index()
     {
-      
     }
 
     /**
@@ -38,9 +39,7 @@ class UserController extends Controller
      */
     public function show(User $users)
     {
-        return view('/profile/show', [
-            "users" => $users
-        ]);
+        //   
     }
 
     /**
@@ -50,8 +49,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('profile/edit',[
-            'post'=>$user
+        return view('profile/edit', [
+            'post' => $user
         ]);
     }
 
@@ -62,9 +61,31 @@ class UserController extends Controller
      * @param  \App\Models\sej11_waktu  $sej11_waktu
      * @return \Illuminate\Http\Response
      */
-    public function update()
+    public function update(Request $request, User $user)
     {
-        //
+         $request->validate([
+             'name' => 'required',
+             'email' => 'required|email',
+             'username' => 'required|min:3|max:255',
+             'password' => 'required|string',
+             'school' => 'required|string',
+             'city' => 'required|string',
+             'birthyear' => 'required|string',
+         ]);
+    
+        User::where('id', $user->id)
+            ->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'username' => $request->username,
+                'password' => $request->password,
+                'school' => $request->school,
+                'city' => $request->city,
+                'birthyear' => $request->birthyear,
+                'password' =>  $request->password
+            ]);
+
+        return redirect('/profile')->with('status', 'Data telah berhasil diubah');
     }
 
     /**

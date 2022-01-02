@@ -3,6 +3,6 @@
 @section('container')
 
 
-<H1>{{ $sej11_level->Sej11_soal }}</H1>
+<H1>{{ $sej11_level->Sej11_soal->soal }}</H1>
 
 @endsection

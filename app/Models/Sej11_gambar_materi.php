@@ -15,10 +15,10 @@ class Sej11_gambar_materi extends Model
 
     public function sej11_levels()
     {
-        return $this->belongsTo(sej11_level::class);
+        return $this->belongsTo(sej11_level::class,'sej11__level_id','id');
     }
 
-    protected static function newFactory(){
-        return Sej11GambarMateriFactory::new();
-    }
+    // protected static function newFactory(){
+    //     return Sej11GambarMateriFactory::new();
+    // }
 }

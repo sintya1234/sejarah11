@@ -19,6 +19,7 @@ class sej11_soalResources extends JsonResource
             'sej11_level_id'=>$this->sej11_level_id,
             'sej11_waktu_id'=>$this->sej11_waktu_id,
             'gambar_materi_id'=>$this->gambar_materi_id,
+            'soal'=>$this->soal,
             'jenis_soal'=>$this->jenis_soal,
             'potongan_gambar'=>$this->potongan_gambar,
 

@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/login', [LoginController::class, 'index']);
@@ -58,4 +58,7 @@ Route::get('/afterlogin', function () {
  Route::get('/beforelogin', function () {
      return view('menu/beforelogin');
  });
-  
+
+ Route::get('/leaderboard', function(){
+     return view('/leaderboard');
+ });

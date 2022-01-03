@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Sej11_gambar_materi;
 use App\Models\Sej11_Level;
 use App\Models\Sej11_link_youtube;
 use App\Models\sej11_opsi_pilgan;
@@ -281,5 +282,6 @@ class DatabaseSeeder extends Seeder
         User::factory(5)->create();
         Sej11_link_youtube::factory(3)->create();
         Sej11_Level::factory(10)->create();
+        Sej11_gambar_materi::factory(5)->create();
     }
 }

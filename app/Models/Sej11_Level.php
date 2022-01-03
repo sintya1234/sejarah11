@@ -29,17 +29,17 @@ class Sej11_Level extends Model
 //fokus ini
     public function sej11_soals()
     {
-        return $this->hasMany(Sej11_soal::class,'sej11__level_id','id');
+        return $this->hasMany(Sej11_soal::class);
     }
 
     public function sej11_gambar_materis()
     {
-        return $this->belongsToMany(sej11_gambar_materi::class);
+        return $this->hasMany(sej11_gambar_materi::class, 'sej11__level_id','id');
     }
 
-    protected static function newFactory(){
-        return Sej11LevelFactory::new();
-    }
+    // protected static function newFactory(){
+    //     return Sej11LevelFactory::new();
+    // }
 
     //ini leveeellll modeeeeelllll
 }

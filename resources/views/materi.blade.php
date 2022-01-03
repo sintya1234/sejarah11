@@ -13,14 +13,17 @@
 
             <h1 class="mb-3">{{ $sej11_level->judul_sub_bab }}</h1>
 
-            <img src="{{ $sej11_level->gambar_utuh }}"
-            class="card-img-top" alt="..." class="card-img-top" alt="...">
+              <img src="{{ $gambar_materi[0]->gambar_materi }}"
+            class="card-img-top" alt="..." class="card-img-top" alt="..."> 
+           
 
             <article class="my-3 fs-5">
                 {!! $sej11_level->materi !!}{{-- supaya yag html terpakai tapi tidak dicetak good --}}
             </article>
         </div>
     </div>
+
+   
 </div>
 @endsection
 

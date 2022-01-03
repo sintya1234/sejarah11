@@ -18,7 +18,7 @@ class Sej11GambarMateriFactory extends Factory
     {
         return [
             'sej11__level_id' => mt_rand(1, 10),
-            'gambar_materi' =>$this->faker->sentence(mt_rand(2, 8)),
+            'gambar_materi' =>'https://img.inews.co.id/media/822/files/inews_new/2021/06/08/IMG_08062021_114613__822_x_430_piksel_.jpg',
         ];
     }
 }

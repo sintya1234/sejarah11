@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Sej11_Level;
 use App\Http\Requests\StoreSej11_LevelRequest;
 use App\Http\Requests\UpdateSej11_LevelRequest;
+use App\Models\Sej11_gambar_materi;
 
 class Sej11LevelController extends Controller
 {
@@ -15,9 +16,10 @@ class Sej11LevelController extends Controller
      */
     public function index()
     {
-        return view('/materis', [
-            'sej11_level' => Sej11_Level::all()
-        ]);
+
+        $sej11_level =  Sej11_Level::all();
+        $sej11_gambar_materi= Sej11_gambar_materi::all();
+        return view('/materis',compact('sej11_level','sej11_gambar_materi'));
     }
 
     /**
@@ -49,8 +51,13 @@ class Sej11LevelController extends Controller
      */
     public function show(Sej11_Level $sej11_Level)
     {
+        
+        $sej11_gambar_materi= Sej11_gambar_materi::where('sej11__level_id',$sej11_Level->id)->get();
+        
         return view('/materi', [
-            "sej11_level" => $sej11_Level
+            "sej11_level" => $sej11_Level,
+            "gambar_materi"=> $sej11_gambar_materi
+            
         ]);
     }
 

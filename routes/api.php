@@ -3,6 +3,8 @@
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Sej11_levelController;
+use App\Http\Controllers\Api\Sej11_opsi_pilganController;
+use App\Http\Controllers\Api\Sej11_soalController;
 use App\Http\Controllers\Api\userController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,11 +22,12 @@ use Illuminate\Support\Facades\Route;
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'login']);
 Route::post('refresh', [LoginController::class, 'refresh']);
-
+Route::apiResource('sej11_levels', Sej11_levelController::class);
+Route::apiResource('sej11_opsi_pilgan', Sej11_opsi_pilganController::class);
+Route::apiResource('sej11_soal', Sej11_soalController::class);
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::apiResource('users', userController::class); 
-    Route::apiResource('sej11_levels', Sej11_levelController::class);
     Route::post('logout', [LoginController::class, 'logout']);
 });
 

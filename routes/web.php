@@ -58,4 +58,7 @@ Route::get('/afterlogin', function () {
  Route::get('/beforelogin', function () {
      return view('menu/beforelogin');
  });
-  
+
+ Route::get('/leaderboard', function(){
+     return view('/leaderboard');
+ });

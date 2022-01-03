@@ -42,6 +42,8 @@
                                     class="rounded-circle" width="150">
                                 <div class="mt-3">
                                     <h4> {{ auth()->user()->username }}</h4>
+                                    <h5> {{auth()->user()->email}} </h5>
+                                    <h6>{{  auth()->user()->school}}</h6>
 
                                 </div>
                             </div>

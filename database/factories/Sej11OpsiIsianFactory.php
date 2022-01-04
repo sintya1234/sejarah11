@@ -18,7 +18,6 @@ class Sej11OpsiIsianFactory extends Factory
     {
         return [
             'sej11_soal_id' => mt_rand(1, 10),
-            'opsi_isian' => Str::random(10),
             'jawaban_benar' => Str::random(10),
         ];
     }

@@ -16,10 +16,8 @@ class sej11_pengerjaanResources extends JsonResource
     {
         return[
             'id'=> $this->id,
-            'user_id'=>$this->user_id,
-            'level_id'=>$this->level_id,
-            'soal_id'=>$this->soal_id,
-            'potongan_gambar_id'=>$this->potongan_gambar_id,
+            'sej11_user_level_id'=>$this->sej11_user_level_id,
+            'sej11_soal_id'=>$this->sej11_soal_id,
             'status_pengerjaan'=>$this->status_pengerjaan,
             ];
     }

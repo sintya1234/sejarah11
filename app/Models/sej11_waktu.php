@@ -13,7 +13,7 @@ class sej11_waktu extends Model
 
     public function sej11_soals()
     {
-        return $this->hasMany(sej11_soal::class);
+        return $this->hasMany(sej11_soal::class,'sej11_waktu_id','id');
     }
 
     protected static function newFactory(){

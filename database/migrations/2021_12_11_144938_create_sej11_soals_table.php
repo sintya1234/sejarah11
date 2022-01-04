@@ -17,10 +17,8 @@ class CreateSej11SoalsTable extends Migration
             $table->id();
             $table->foreignId('sej11__level_id');
             $table->foreignId('sej11_waktu_id');
-            $table->foreignId('gambar_materi_id')->nullable();
+            $table->string('potongan_gambar')->nullable();
             $table->String('soal');
-            $table->integer('jenis_soal')->default(0);
-            $table->String('potongan_gambar');
             $table->timestamps();
         });
     }

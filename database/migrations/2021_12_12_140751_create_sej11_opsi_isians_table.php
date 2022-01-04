@@ -16,7 +16,6 @@ class CreateSej11OpsiIsiansTable extends Migration
         Schema::create('sej11_opsi_isians', function (Blueprint $table) {
             $table->id();
             $table->foreignId('sej11_soal_id');
-            $table->string('opsi_isian');
             $table->string('jawaban_benar');
             $table->timestamps();
         });

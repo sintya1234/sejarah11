@@ -17,7 +17,6 @@ class sej11_opsi_isianResources extends JsonResource
         return[
             'id'=> $this->id,
             'sej11_soal_id'=>$this->sej11_soal_id,
-            'opsi_isian'=>$this->opsi_isian,
             'jawaban_benar'=>$this->jawaban_benar,
             ];
     }

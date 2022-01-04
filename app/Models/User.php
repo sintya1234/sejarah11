@@ -52,11 +52,11 @@ class User extends Authenticatable
 
     public function Sej11_User_Levels()
     {
-        return $this->hasMany(Sej11_User_Level::class);
+        return $this->hasMany(Sej11_User_Level::class,'user_id','id');
     }
 
     public function sej11_leaderboard()
     {
-        return $this->belongsTo(sej11_leaderboard::class);
+        return $this->belongsTo(sej11_leaderboard::class,'user_id','id');
     }
 }

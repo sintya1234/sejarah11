@@ -23,6 +23,7 @@ class userResources extends JsonResource
             'school'=>$this->school,
             'city'=>$this->city,
             'birthyear'=>$this->birthyear,
+            'photo'=>$this->photo,
             ];
     }
 }

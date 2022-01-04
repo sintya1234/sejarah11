@@ -13,7 +13,7 @@ class Sej11_opsi_pilgan extends Model
 
     public function sej11_soal()
     {
-        return $this->belongsTo(sej11_soal::class);
+        return $this->belongsTo(sej11_soal::class,'sej11_soal_id','id');
     }
 
     // protected static function newFactory(){

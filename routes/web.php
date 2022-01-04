@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\sej11_soalController;
 use App\Http\Controllers\Sej11LevelController;
+use App\Http\Controllers\Sej11PengerjaanController;
 use App\Http\Controllers\Sej11SoalController;
 use App\Http\Controllers\UserController;
 use App\Models\sej11_soal;
@@ -41,7 +42,28 @@ Route::get('/menu', function () {
 Route::get('/quiz', [Sej11LevelController::class, 'quiz_index']);
 Route::get('/quiz/{sej11_Level}', [Sej11LevelController::class, 'menu_play_show']);
 
-Route::get('/quiz/{sej11_Level}/soal1', [Sej11LevelController::class, 'quiz_soal_show']);
+//untuk soal get soal dan pilgan quiz, maap ku belum tau cara efesiennya get
+Route::get('/quiz/{sej11_Level}/soal1', [Sej11LevelController::class, 'quiz_soal_show_1']);
+Route::get('/quiz/{sej11_Level}/soal2', [Sej11LevelController::class, 'quiz_soal_show_2']);
+Route::get('/quiz/{sej11_Level}/soal3', [Sej11LevelController::class, 'quiz_soal_show_3']);
+Route::get('/quiz/{sej11_Level}/soal4', [Sej11LevelController::class, 'quiz_soal_show_4']);
+Route::get('/quiz/{sej11_Level}/soal5', [Sej11LevelController::class, 'quiz_soal_show_5']);
+Route::get('/quiz/{sej11_Level}/soal6', [Sej11LevelController::class, 'quiz_soal_show_6']);
+Route::get('/quiz/{sej11_Level}/soal7', [Sej11LevelController::class, 'quiz_soal_show_7']);
+Route::get('/quiz/{sej11_Level}/soal8', [Sej11LevelController::class, 'quiz_soal_show_8']);
+Route::get('/quiz/{sej11_Level}/soal9', [Sej11LevelController::class, 'quiz_soal_show_9']);
+Route::get('/quiz/{sej11_Level}/soal10', [Sej11LevelController::class, 'quiz_soal_show_10']);
+Route::get('/quiz/{sej11_Level}/soal11', [Sej11LevelController::class, 'quiz_soal_show_11']);
+Route::get('/quiz/{sej11_Level}/soal12', [Sej11LevelController::class, 'quiz_soal_show_12']);
+Route::get('/quiz/{sej11_Level}/soal13', [Sej11LevelController::class, 'quiz_soal_show_13']);
+Route::get('/quiz/{sej11_Level}/soal14', [Sej11LevelController::class, 'quiz_soal_show_14']);
+Route::get('/quiz/{sej11_Level}/soal15', [Sej11LevelController::class, 'quiz_soal_show_15']);
+
+//
+Route::post('/quiz/{sej11_Level}/soal1', [Sej11PengerjaanController::class, 'store_soal1']);
+
+
+
 
 Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth');
 
@@ -62,3 +84,8 @@ Route::get('/afterlogin', function () {
  Route::get('/leaderboard', function(){
      return view('/leaderboard');
  });
+
+
+ Route::get('/soal', function(){
+    return view('/quiz/soal/soal');
+});

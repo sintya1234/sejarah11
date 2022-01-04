@@ -58,7 +58,7 @@ class RegisterController extends Controller
 
         public function storeWeb(Request $request)
     {
-        $this->validate($request, [
+        $validatedData=$this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
             'username' => 'required|min:3|max:255|unique:users',
@@ -68,7 +68,9 @@ class RegisterController extends Controller
             'birthyear'=>'required|string',
         ]);
 
-        $user = $this->newUser($request->all());
+        $validatedData['password'] = bcrypt($validatedData['password']);
+
+        $user=User::create($validatedData);
     
         if(empty($user)){
             return response([

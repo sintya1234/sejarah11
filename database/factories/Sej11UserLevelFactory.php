@@ -17,10 +17,8 @@ class Sej11UserLevelFactory extends Factory
     public function definition()
     {
         return [
-            'sej11_user_level_id' => mt_rand(1, 3),
             'user_id' => mt_rand(1, 3),
-            'sej11_level_id' => mt_rand(1, 2),
-            'waktu_pengerjaan' => mt_rand(1, 10),
+            'sej11__level_id' => mt_rand(1, 2),
             'score' => mt_rand(1, 100)
         ];
     }

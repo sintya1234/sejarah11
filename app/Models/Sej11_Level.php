@@ -10,8 +10,8 @@ class Sej11_Level extends Model
 {
     use HasFactory;
 
+    protected $table='sej11__levels';
     protected $fillable = [
-       'sej11_link_youtube_id',
         'gambar_utuh',
         'judul_sub_bab',
         'materi',
@@ -19,7 +19,7 @@ class Sej11_Level extends Model
 
     public function sej11_user_levels()
     {
-        return $this->hasMany(sej11_user_level::class);
+        return $this->hasMany(sej11_user_level::class,'sej11__level_id','id');
     }
 
     public function sej11_link_youtubes()
@@ -37,9 +37,9 @@ class Sej11_Level extends Model
         return $this->hasMany(sej11_gambar_materi::class, 'sej11__level_id','id');
     }
 
-    // protected static function newFactory(){
-    //     return Sej11LevelFactory::new();
-    // }
+    protected static function newFactory(){
+        return Sej11LevelFactory::new();
+    }
 
     //ini leveeellll modeeeeelllll
 }

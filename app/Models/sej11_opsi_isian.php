@@ -16,8 +16,8 @@ class sej11_opsi_isian extends Model
         return $this->belongsTo(sej11_soal::class);
     }
 
-    protected static function newFactory(){
-        return Sej11OpsiIsianFactory::new();
-    }
+    // protected static function newFactory(){
+    //     return Sej11OpsiIsianFactory::new();
+    // }
 
 }

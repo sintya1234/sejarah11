@@ -22,6 +22,7 @@ class UserFactory extends Factory
             'school'=>'SMA Indonesia',
             'birthyear'=>'2002',
             'city'=>'Surabaya',
+            'photo'=>'lala.png',
             'remember_token' => Str::random(10),
         ];
     }

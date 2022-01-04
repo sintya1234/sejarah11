@@ -15,6 +15,7 @@
                 @if ($loop->first)
                 <td> <a href="/quiz/{{ $level->id }}"><button type="button" class="btn btn-secondary">play</button></a></td>
                 @else
+                {{-- <td> <a href="/quiz/{{ $level->id }}"><button type="button" class="btn btn-secondary">play</button></a></td> --}}
                 <td>terkunci</td>
                 @endif
        

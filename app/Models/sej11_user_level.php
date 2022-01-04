@@ -12,24 +12,23 @@ class sej11_user_level extends Model
 
     protected $fillable = [
         'user_id',
-        'sej11_level_id',
+        'sej11__level_id',
         'score',
-        'waktu_pengerjaan',
     ];
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id','user');
     }
 
     public function sej11_level()
     {
-        return $this->belongsTo(sej11_level::class);
+        return $this->belongsTo(sej11_level::class,'sej11__level_id','id');
     }
 
     public function sej11_pengerjaans()
     {
-        return $this->hasMany(sej11_level::class);
+        return $this->hasMany(sej11_level::class,'sej11_pengerjaan_id','id');
     }
 
     protected static function newFactory(){

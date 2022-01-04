@@ -18,9 +18,8 @@ class sej11_user_levelResources extends JsonResource
             'id'=> $this->id,
             'sej11_user_level_id'=>$this->sej11_user_level_id,
             'user_id'=>$this->user_id,
-            'sej11_level_id'=>$this->sej11_level_id,
-            'score'=>$this->score,
-            'waktu_pengerjaan'=>$this->waktu_pengerjaan,
+            'sej11__level_id'=>$this->sej11__level_id,
+            'score'=>$this->score
             ];
     }
 }

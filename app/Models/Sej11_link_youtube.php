@@ -13,7 +13,7 @@ class Sej11_link_youtube extends Model
 
     public function sej11_level()
     {
-        return $this->belongsTo(sej11_level::class);
+        return $this->belongsTo(sej11_level::class,'sej11__level_id','id');
     } 
 
     protected static function newFactory(){

@@ -63,7 +63,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-         $request->validate([
+        $request->validate([
              'name' => 'required',
              'email' => 'required|email',
              'username' => 'required|min:3|max:255',
@@ -82,7 +82,8 @@ class UserController extends Controller
                 'school' => $request->school,
                 'city' => $request->city,
                 'birthyear' => $request->birthyear,
-                'password' =>  $request->password
+                'password' =>  $request->password,
+                'photo' =>  $request->photo
             ]);
 
         return redirect('/profile')->with('status', 'Data telah berhasil diubah');

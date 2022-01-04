@@ -16,10 +16,8 @@ class Sej11PengerjaanFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => mt_rand(1, 10),
-            'level_id' => mt_rand(1, 10),
-            'soal_id' => mt_rand(1, 10),
-            'potongan_gambar_id' => mt_rand(1, 10),
+            'sej11_user_level_id' => mt_rand(1, 10),
+            'sej11_soal_id' => mt_rand(1, 10),
             'status_pengerjaan' => mt_rand(1, 10),
         ];
     }

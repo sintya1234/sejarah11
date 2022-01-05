@@ -39,7 +39,7 @@ class Sej11_opsi_pilganController extends Controller
      */
     public function show($id)
     {
-        $sej11_opsi_pilgan = sej11_opsi_pilgan::all()->where('id', $id);
+        $sej11_opsi_pilgan = sej11_opsi_pilgan::all()->where('sej11_soal_id', $id);
         return ['sej11_opsi_pilgan' => sej11_opsi_pilganResources::collection($sej11_opsi_pilgan)];
     }
 

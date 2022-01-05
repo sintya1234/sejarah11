@@ -39,7 +39,7 @@ class sej11_soalController extends Controller
      */
     public function show($id)
     {
-        $sej11_soal = sej11_soal::all()->where('id', $id);
+        $sej11_soal = sej11_soal::all()->where('sej11__level_id', $id);
         return ['sej11_soal' => sej11_soalResources::collection($sej11_soal)];
     }
 

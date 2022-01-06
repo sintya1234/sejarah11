@@ -42,15 +42,10 @@ class Sej11PengerjaanController extends Controller
      */
     public function store_soal1(Storesej11_pengerjaanRequest $request)
     {
-        // $user=  User::;
-        // dd($user);
         $check = $request->input('opsi_pg');
         $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
       
-       
-
-   // dd($sej11_soal_id);
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
         if ($sepg ===1) {
@@ -63,41 +58,320 @@ class Sej11PengerjaanController extends Controller
 
         $pengerjaan->save();
 
-        // $yesorno=$request->status_pengerjaan
-
-        //         $pengerjaan = new sej11_pengerjaan();
-        //         $pengerjaan->sej11_user_level_id = $request->sej11_user_level_id;
-        //         $pengerjaan->soal_id  = $request->soal_id ;
-        //         $pengerjaan->status_pengerjaan  = $request->status_pengerjaan ;
-        //         $pengerjaan->save();
-
-        //  return $book;
-
-        // $sej11_pengerjaan= new sej11_pengerjaan();
-        // $sej11_pengerjan->opsi_pg=$user
-        // $sej11_pengerjan->opsi_pg=$request->opsi_pg;
-
-        // }
-
-        // $validatedData = $request->validate([
-        //     'name' => 'required|max:200',
-        //     'username' => 'required|min:3|max:255|unique:users',
-        //     'email' => 'required|email:dns|unique:users',
-        //     'password' => 'required|min:5|max:255'
-        // ]);
-
-        // $validatedData['password'] = bcrypt($validatedData['password']);
-
-        // sej11_pengerjaan::create($validatedData);
-
-
-
-        // return redirect('/login')->with('success', 'Registration successfuul !! please login');
-
-
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_2'],  [$sej11_level_id]);
+       
 
     }
 
+    public function store_soal2(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+        dd($pengerjaan->save());
+     
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_3'],  [$sej11_level_id]);
+    }
+
+    public function store_soal3(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_4'],  [$sej11_level_id]);
+    }
+
+    public function store_soal4(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_5'],  [$sej11_level_id]);
+    }
+
+    public function store_soal5(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_6'],  [$sej11_level_id]);
+    }
+
+    public function store_soal6(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_7'],  [$sej11_level_id]);
+    }
+
+    public function store_soal7(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_8'],  [$sej11_level_id]);
+    }
+
+    public function store_soal8(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_9'],  [$sej11_level_id]);
+    }
+
+
+    public function store_soal9(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_10'],  [$sej11_level_id]);
+    }
+
+    public function store_soal10(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_11'],  [$sej11_level_id]);
+    }
+    public function store_soal11(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_12'],  [$sej11_level_id]);
+    }
+
+    public function store_soal12(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_13'],  [$sej11_level_id]);
+    }
+
+    public function store_soal13(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_14'],  [$sej11_level_id]);
+    }
+
+    public function store_soal14(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_15'],  [$sej11_level_id]);
+    }
+
+    public function store_soal15(Storesej11_pengerjaanRequest $request)
+    {
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+      //  return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_12'],  [$sej11_level_id]);
+    }
     /**
      * Display the specified resource.
      *

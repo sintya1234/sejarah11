@@ -63,6 +63,20 @@ Route::get('/quiz/{sej11_Level}/soal15', [Sej11LevelController::class, 'quiz_soa
 //
 
 Route::post('/quiz/{sej11_Level}/soal1', [Sej11PengerjaanController::class, 'store_soal1']);
+Route::post('/quiz/{sej11_Level}/soal2', [Sej11PengerjaanController::class, 'store_soal2']);
+Route::post('/quiz/{sej11_Level}/soal3', [Sej11PengerjaanController::class, 'store_soal3']);
+Route::post('/quiz/{sej11_Level}/soal4', [Sej11PengerjaanController::class, 'store_soal4']);
+Route::post('/quiz/{sej11_Level}/soal5', [Sej11PengerjaanController::class, 'store_soal5']);
+Route::post('/quiz/{sej11_Level}/soal6', [Sej11PengerjaanController::class, 'store_soal6']);
+Route::post('/quiz/{sej11_Level}/soal7', [Sej11PengerjaanController::class, 'store_soal7']);
+Route::post('/quiz/{sej11_Level}/soal8', [Sej11PengerjaanController::class, 'store_soal8']);
+Route::post('/quiz/{sej11_Level}/soal9', [Sej11PengerjaanController::class, 'store_soal9']);
+Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'store_soal10']);
+Route::post('/quiz/{sej11_Level}/soal11', [Sej11PengerjaanController::class, 'store_soal11']);
+Route::post('/quiz/{sej11_Level}/soal12', [Sej11PengerjaanController::class, 'store_soal12']);
+Route::post('/quiz/{sej11_Level}/soal13', [Sej11PengerjaanController::class, 'store_soal13']);
+Route::post('/quiz/{sej11_Level}/soal14', [Sej11PengerjaanController::class, 'store_soal14']);
+Route::post('/quiz/{sej11_Level}/soal15', [Sej11PengerjaanController::class, 'store_soal15']);
 
 
 

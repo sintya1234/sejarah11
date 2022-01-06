@@ -81,7 +81,7 @@ class Sej11PengerjaanController extends Controller
         $pengerjaan->sej11_soal_id = $sej11_soal;
 
         $pengerjaan->save();
-        dd($pengerjaan->save());
+        //dd($pengerjaan->save());
      
         $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
         return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_3'],  [$sej11_level_id]);

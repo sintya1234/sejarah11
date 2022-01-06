@@ -69,7 +69,7 @@ class Sej11PengerjaanController extends Controller
         $check = $request->input('opsi_pg');
         $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+        dd($check);
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
         if ($sepg ===1) {
@@ -92,7 +92,7 @@ class Sej11PengerjaanController extends Controller
         $check = $request->input('opsi_pg');
         $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+  
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
         if ($sepg ===1) {

@@ -41,5 +41,10 @@ class Sej11_Level extends Model
         return Sej11LevelFactory::new();
     }
 
+    public function users()
+    {
+        return $this->belongsToMany(User::class,'sej11_user_levels','sej11__level_id','user_id');
+    }
+
     //ini leveeellll modeeeeelllll
 }

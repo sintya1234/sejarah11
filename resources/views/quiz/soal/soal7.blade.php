@@ -5,7 +5,7 @@
 <p>timer</p>
 <H1>{{ $sej11_soal[6]->soal }}</H1>
 
-<form action="/action_page.php">
+<form action="/quiz/{{ $sej11_soal[6]->sej11_level->id }}/soal7" method="POST" name="soal7">
     @foreach ($sej11_soal[6]->sej11_opsi_pilgans as $pg)
     <input type="radio" name="opsi_pg">
     <label >{{ $pg->opsi_pg }}</label><br>

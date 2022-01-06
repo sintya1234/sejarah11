@@ -8,6 +8,7 @@ use App\Http\Controllers\Sej11PengerjaanController;
 use App\Http\Controllers\Sej11SoalController;
 use App\Http\Controllers\UserController;
 use App\Models\sej11_soal;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,7 +43,7 @@ Route::get('/menu', function () {
 Route::get('/quiz', [Sej11LevelController::class, 'quiz_index']);
 Route::get('/quiz/{sej11_Level}', [Sej11LevelController::class, 'menu_play_show']);
 
-//untuk soal get soal dan pilgan quiz, maap ku belum tau cara efesiennya get
+//untuk soal get soal dan pilgan quiz, maap ku belum tau cara efesiennya 
 Route::get('/quiz/{sej11_Level}/soal1', [Sej11LevelController::class, 'quiz_soal_show_1']);
 Route::get('/quiz/{sej11_Level}/soal2', [Sej11LevelController::class, 'quiz_soal_show_2']);
 Route::get('/quiz/{sej11_Level}/soal3', [Sej11LevelController::class, 'quiz_soal_show_3']);
@@ -60,6 +61,7 @@ Route::get('/quiz/{sej11_Level}/soal14', [Sej11LevelController::class, 'quiz_soa
 Route::get('/quiz/{sej11_Level}/soal15', [Sej11LevelController::class, 'quiz_soal_show_15']);
 
 //
+
 Route::post('/quiz/{sej11_Level}/soal1', [Sej11PengerjaanController::class, 'store_soal1']);
 
 

@@ -13,7 +13,7 @@ class Storesej11_pengerjaanRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**

@@ -31,6 +31,11 @@ class sej11_user_level extends Model
         return $this->hasMany(sej11_level::class,'sej11_pengerjaan_id','id');
     }
 
+    public function sej11_soals()
+    {
+        return $this->belongsToMany(Sej11_soal::class,'sej11_pengerjaans','sej11_user_level_id','sej11_soal_id');
+    }
+
     protected static function newFactory(){
         return Sej11UserLevelFactory::new();
     }

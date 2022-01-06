@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\sej11_pengerjaan;
 use App\Http\Requests\Storesej11_pengerjaanRequest;
 use App\Http\Requests\Updatesej11_pengerjaanRequest;
+use App\Models\Sej11_opsi_pilgan;
+use App\Models\Sej11_soal;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,6 +17,8 @@ class Sej11PengerjaanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
         //
@@ -38,8 +42,36 @@ class Sej11PengerjaanController extends Controller
      */
     public function store_soal1(Storesej11_pengerjaanRequest $request)
     {
-        // $user=Auth::id();
+        // $user=  User::;
         // dd($user);
+        $check = $request->input('opsi_pg');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
+      
+       
+
+   // dd($sej11_soal_id);
+        $pengerjaan = new sej11_pengerjaan();
+        $pengerjaan->sej11_user_level_id =  null;
+        if ($sepg ===1) {
+            $pengerjaan->status_pengerjaan  = 1;      
+        } else {
+            $pengerjaan->status_pengerjaan  = 0 ;
+        }
+
+        $pengerjaan->sej11_soal_id = $sej11_soal;
+
+        $pengerjaan->save();
+
+        // $yesorno=$request->status_pengerjaan
+
+        //         $pengerjaan = new sej11_pengerjaan();
+        //         $pengerjaan->sej11_user_level_id = $request->sej11_user_level_id;
+        //         $pengerjaan->soal_id  = $request->soal_id ;
+        //         $pengerjaan->status_pengerjaan  = $request->status_pengerjaan ;
+        //         $pengerjaan->save();
+
+        //  return $book;
 
         // $sej11_pengerjaan= new sej11_pengerjaan();
         // $sej11_pengerjan->opsi_pg=$user
@@ -55,15 +87,15 @@ class Sej11PengerjaanController extends Controller
         // ]);
 
         // $validatedData['password'] = bcrypt($validatedData['password']);
-      
+
         // sej11_pengerjaan::create($validatedData);
 
-     
+
 
         // return redirect('/login')->with('success', 'Registration successfuul !! please login');
 
 
-        
+
     }
 
     /**

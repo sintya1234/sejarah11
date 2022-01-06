@@ -59,4 +59,8 @@ class User extends Authenticatable
     {
         return $this->belongsTo(sej11_leaderboard::class,'user_id','id');
     }
+    public function sej11__levels()
+    {
+        return $this->belongsToMany(Sej11_Level::class,'sej11_user_levels','user_id','sej11__level_id');
+    }
 }

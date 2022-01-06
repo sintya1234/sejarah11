@@ -15,8 +15,8 @@ class CreateSej11PengerjaansTable extends Migration
     {
         Schema::create('sej11_pengerjaans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('sej11_user_level_id');  
-            $table->foreignId('soal_id');
+            $table->foreignId('sej11_user_level_id')->nullable();  
+            $table->foreignId('sej11_soal_id');
             $table->integer('status_pengerjaan');    
             $table->timestamps();
         });

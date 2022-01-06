@@ -37,6 +37,12 @@ class Sej11_soal extends Model
     {
         return $this->belongsTo(sej11_opsi_isian::class);
     }
+
+    public function sej11_user_levels()
+    {
+        return $this->belongsToMany(sej11_user_level::class,'sej11_pengerjaans','sej11_soal_id','sej11_user_level_id');
+    }
+
     protected static function newFactory(){
         return Sej11SoalFactory::new();
     }

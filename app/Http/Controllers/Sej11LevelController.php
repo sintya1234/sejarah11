@@ -227,4 +227,10 @@ class Sej11LevelController extends Controller
             "sej11_soal" => $sej11_soal
         ]);
     }
+    // public function store_soal1(StoreSej11_LevelRequest $request)
+    // {
+    //     dd($request);
+        
+    // }
 }
+

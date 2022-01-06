@@ -657,7 +657,7 @@ class DatabaseSeeder extends Seeder
         sej11_opsi_pilgan::create([
             'sej11_soal_id' => 15,
             'opsi_pg' => "Terikat oleh aliansi sesama negara Slav dengan negara Serbia",
-            'status_benar' => 0,
+            'status_benar' => 1,
         ]);
         sej11_opsi_pilgan::create([
             'sej11_soal_id' => 15,

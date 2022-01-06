@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        //soal level 1, ini id nya ngurut dari 1 sampe 15. nnti di level 2 id soalnya mulai dari 16 sampe 30 dan begitu seterusnya
+        //soal level 1, ini id nya ngurut dari 1 sampe 10. nnti di level 2 id soalnya mulai dari 11 sampe 20 dan begitu seterusnya
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 1,
@@ -101,9 +101,7 @@ class DatabaseSeeder extends Seeder
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 2,
-
             'soal' => "Perang dunia I terkenal akan adanya perang parit, dimana para tentara berlindung di dalam parit untuk menunggu musuh datang atau sekedar mempertahankan garis wilayah, salah satu pertempuran parit terbesar di Perang Dunia I adalah ",
-
             'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
         ]);
 
@@ -146,43 +144,7 @@ class DatabaseSeeder extends Seeder
             'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
         ]);
 
-        sej11_soal::create([
-            'sej11__level_id' => 1,
-            'sej11_waktu_id' => 3,
-            'soal' => "Kondisi persaingan Industri dan militer antara Jerman dan Inggris sebenarnya juga didukung oleh masing-masing daerah koloni/jajahan di luar Eropa, sebagai salah satu negara yang memiliki wilayah jajahan paling luas di dunia, Inggris menitikberatkan pembangunan pertahanan angkatan lautnya, hal ini menurut Inggris sangat logis karena..",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
-        ]);
-
-
-        sej11_soal::create([
-            'sej11__level_id' => 1,
-            'sej11_waktu_id' => 3,
-            'soal' => "Bila dianalisis secara mendalam, faktor yang menyebabkan negara-negara di Eropa membentuk aliansi adalah karena …",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
-        ]);
-
-        sej11_soal::create([
-            'sej11__level_id' => 1,
-            'sej11_waktu_id' => 3,
-            'soal' => "Rasa Etnosentrisme yang berlebihan terwujud dalam gerakan Pan-Slavisme yang menghendaki seluruh etnis Slavia selatan menjadi satu negara utuh yang diperintah oleh Etnis Slavia selatan sendiri, menurut uraian materi, negara mana yang paling teguh mengumandangkan paham Pan-Slavisme di kawasan Balkan ...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
-        ]);
-
-        sej11_soal::create([
-            'sej11__level_id' => 1,
-            'sej11_waktu_id' => 3,
-            'soal' => "Putra Mahkota yang tertembak di Sarajevo pada tahun 1914 merupakan anak dari .",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
-        ]);
-
-        sej11_soal::create([
-            'sej11__level_id' => 1,
-            'sej11_waktu_id' => 3,
-            'soal' => "Pembunuhan terhadap Franz Ferdiinand mengakibatkan Perang Dunia II dimulai, mengapa Rusia lantas terlibat dalam perang tersebut",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
-        ]);
-
-
+        
         //opsi 
         //level 1 
         //nomor 1
@@ -520,167 +482,8 @@ class DatabaseSeeder extends Seeder
             'status_benar' => 1,
         ]);
 
-        //nomor 11
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 11,
-            'opsi_pg' => "Inggris belum mempunyai teknologi pesawat terbang pada tahun 1910",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 11,
-            'opsi_pg' => "Angkatan laut menjadi tradisi dan kebanggaan Inggris sejak masa abad pertengahan",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 11,
-            'opsi_pg' => "Inggris menjajah India dan negara-negara Afrika yang memiliki cadangan kayu sangat besar untuk pembangunan kapal laut",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 11,
-            'opsi_pg' => "Inggris memerlukan angkatan laut yang kuat karena merupakan negara kepulauan",
-            'status_benar' => 1,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 11,
-            'opsi_pg' => "Pembangunan Angkatan Laut merupakan kelemahan Jerman sehingga untuk mengimbangi kekuatan Jerman, Inggris perlu membangun hal yang Jerman tidak miliki",
-            'status_benar' => 0,
-        ]);
-        //nomor 12, b
-        // A. Ancaman dari negara sekutu
-        // B. Rasa terancam terhadap kekuatan negara lain
-        // C. Saling menuntungkan secara ekonomi dan politik
-        // D. Mencari negara yang senasib dan sepenanggungan
-        // E. Berupaya mewujudkan pemerintahan dunia yang bersih dan netral
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 12,
-            'opsi_pg' => "Ancaman dari negara sekutu",
-            'status_benar' => 0,
-        ]);
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 12,
-            'opsi_pg' => "Rasa terancam terhadap kekuatan negara lain",
-            'status_benar' => 1,
-        ]);
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 12,
-            'opsi_pg' => "Saling menuntungkan secara ekonomi dan politik",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 12,
-            'opsi_pg' => "Mencari negara yang senasib dan sepenanggungan",
-            'status_benar' => 0,
-        ]);
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 12,
-            'opsi_pg' => "Berupaya mewujudkan pemerintahan dunia yang bersih dan netral",
-            'status_benar' => 0,
-        ]);
-
-        //nomor 13, d
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 13,
-            'opsi_pg' => "Bosnia",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 13,
-            'opsi_pg' => "Kroasia",
-            'status_benar' => 0,
-        ]);
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 13,
-            'opsi_pg' => "Slovenia",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 13,
-            'opsi_pg' => "Serbia",
-            'status_benar' => 1,
-        ]);
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 13,
-            'opsi_pg' => "Makedonia",
-            'status_benar' => 0,
-        ]);
-
-        //nomor 14, c
-
-        // A. Kaisar Jerman
-        // B. Kaisar Serbia
-        // C. Kaisar Austria-Hongaria
-        // D. Raja Rusia
-        // E. Penguasa Bosnia 
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 14,
-            'opsi_pg' => "Kaisar Jerman",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 14,
-            'opsi_pg' => "Kaisar Serbia",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 14,
-            'opsi_pg' => "Kaisar Austria-Hongaria",
-            'status_benar' => 1,
-        ]);
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 14,
-            'opsi_pg' => "Raja Rusia",
-            'status_benar' => 0,
-        ]);
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 14,
-            'opsi_pg' => "Penguasa Bosnia",
-            'status_benar' => 0,
-        ]);
-
-        //nomor 15, A
-        // A. Terikat oleh aliansi sesama negara Slav dengan negara Serbia
-        // B. Memiliki keinginan untuk sama-sama menghancurkan Jerman dan Austria-Hongaria yang sering mengancam perbatasannya
-        // C. Rusia memiliki kepentingan ekonomi terhadap adanya Perang besar untuk memakmurkan rakyatnya
-        // D. Franz Ferdinand merupakan menantu dari Kaisar Rusia, Nicholas II dari dinasti Romanoff
-        // E. Rusia marah terhadap Serbia karena putra mahkotanya terbunuh
-
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 15,
-            'opsi_pg' => "Terikat oleh aliansi sesama negara Slav dengan negara Serbia",
-            'status_benar' => 1,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 15,
-            'opsi_pg' => "Memiliki keinginan untuk sama-sama menghancurkan Jerman dan Austria-Hongaria yang sering mengancam perbatasannya",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 15,
-            'opsi_pg' => "Rusia memiliki kepentingan ekonomi terhadap adanya Perang besar untuk memakmurkan rakyatnya",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 15,
-            'opsi_pg' => "Franz Ferdinand merupakan menantu dari Kaisar Rusia, Nicholas II dari dinasti Romanoff",
-            'status_benar' => 0,
-        ]);
-        sej11_opsi_pilgan::create([
-            'sej11_soal_id' => 15,
-            'opsi_pg' => "Rusia marah terhadap Serbia karena putra mahkotanya terbunuh",
-            'status_benar' => 0,
-        ]);
-
-        //waktu
+       
+   //waktu
         sej11_waktu::create([
             'waktu' => 30,
         ]);

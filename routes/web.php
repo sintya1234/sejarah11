@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\sej11_soalController;
 use App\Http\Controllers\Sej11LevelController;
 use App\Http\Controllers\Sej11PengerjaanController;
 use App\Http\Controllers\Sej11SoalController;
+use App\Http\Controllers\Sej11UserLevelController;
 use App\Http\Controllers\UserController;
 use App\Models\sej11_soal;
 use Illuminate\Support\Facades\Auth;
@@ -28,10 +29,10 @@ Route::get('/', function () {
 
 Route::get('/login', [LoginController::class, 'index']);
 //->middleware('guest');
-Route::post('/login', [LoginController::class,'loginWeb']);
+Route::post('/login', [LoginController::class, 'loginWeb']);
 
 Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register', [RegisterController::class,'storeWeb']);
+Route::post('/register', [RegisterController::class, 'storeWeb']);
 
 Route::get('/kumpulan-materi', [Sej11LevelController::class, 'index']);
 Route::get('/kumpulan-materi/{sej11_Level}', [Sej11LevelController::class, 'show']);
@@ -54,17 +55,18 @@ Route::get('/quiz/{sej11_Level}/soal7', [Sej11LevelController::class, 'quiz_soal
 Route::get('/quiz/{sej11_Level}/soal8', [Sej11LevelController::class, 'quiz_soal_show_8']);
 Route::get('/quiz/{sej11_Level}/soal9', [Sej11LevelController::class, 'quiz_soal_show_9']);
 Route::get('/quiz/{sej11_Level}/soal10', [Sej11LevelController::class, 'quiz_soal_show_10']);
-Route::get('/quiz/{sej11_Level}/soal11', [Sej11LevelController::class, 'quiz_soal_show_11']);
-Route::get('/quiz/{sej11_Level}/soal12', [Sej11LevelController::class, 'quiz_soal_show_12']);
-Route::get('/quiz/{sej11_Level}/soal13', [Sej11LevelController::class, 'quiz_soal_show_13']);
-Route::get('/quiz/{sej11_Level}/soal14', [Sej11LevelController::class, 'quiz_soal_show_14']);
-Route::get('/quiz/{sej11_Level}/soal15', [Sej11LevelController::class, 'quiz_soal_show_15']);
+
 
 //
 
 Route::post('/quiz/{sej11_Level}/soal1', [Sej11PengerjaanController::class, 'store_soal1']);
 Route::post('/quiz/{sej11_Level}/soal2', [Sej11PengerjaanController::class, 'store_soal2']);
+
+
 Route::post('/quiz/{sej11_Level}/soal3', [Sej11PengerjaanController::class, 'store_soal3']);
+
+
+
 Route::post('/quiz/{sej11_Level}/soal4', [Sej11PengerjaanController::class, 'store_soal4']);
 Route::post('/quiz/{sej11_Level}/soal5', [Sej11PengerjaanController::class, 'store_soal5']);
 Route::post('/quiz/{sej11_Level}/soal6', [Sej11PengerjaanController::class, 'store_soal6']);
@@ -72,12 +74,9 @@ Route::post('/quiz/{sej11_Level}/soal7', [Sej11PengerjaanController::class, 'sto
 Route::post('/quiz/{sej11_Level}/soal8', [Sej11PengerjaanController::class, 'store_soal8']);
 Route::post('/quiz/{sej11_Level}/soal9', [Sej11PengerjaanController::class, 'store_soal9']);
 Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'store_soal10']);
-Route::post('/quiz/{sej11_Level}/soal11', [Sej11PengerjaanController::class, 'store_soal11']);
-Route::post('/quiz/{sej11_Level}/soal12', [Sej11PengerjaanController::class, 'store_soal12']);
-Route::post('/quiz/{sej11_Level}/soal13', [Sej11PengerjaanController::class, 'store_soal13']);
-Route::post('/quiz/{sej11_Level}/soal14', [Sej11PengerjaanController::class, 'store_soal14']);
-Route::post('/quiz/{sej11_Level}/soal15', [Sej11PengerjaanController::class, 'store_soal15']);
 
+
+Route::get('/quiz/{sej11_Level}/akhir_soal', [Sej11UserLevelController::class, 'show_akhir_soal']);
 
 
 
@@ -91,17 +90,17 @@ Route::get('/profile', function () {
 });
 
 Route::get('/afterlogin', function () {
-     return view('menu/afterlogin');
- });
- Route::get('/beforelogin', function () {
-     return view('menu/beforelogin');
- });
+    return view('menu/afterlogin');
+});
+Route::get('/beforelogin', function () {
+    return view('menu/beforelogin');
+});
 
- Route::get('/leaderboard', function(){
-     return view('/leaderboard');
- });
+Route::get('/leaderboard', function () {
+    return view('/leaderboard');
+});
 
 
- Route::get('/soal', function(){
+Route::get('/soal', function () {
     return view('/quiz/soal/soal');
 });

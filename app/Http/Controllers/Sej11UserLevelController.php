@@ -13,9 +13,9 @@ class Sej11UserLevelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index_akhir_soal()
     {
-        //
+        
     }
 
     /**
@@ -47,7 +47,7 @@ class Sej11UserLevelController extends Controller
      */
     public function show(sej11_user_level $sej11_user_level)
     {
-        //
+        
     }
 
     /**

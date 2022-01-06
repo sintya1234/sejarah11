@@ -39,7 +39,8 @@ class Sej11_waktuController extends Controller
      */
     public function show($id)
     {
-        //
+        $Sej11_waktu = sej11_waktu::all()->where('id', $id);
+        return ['sej11_waktu' => sej11_waktuResources::collection($Sej11_waktu)];
     }
 
     /**

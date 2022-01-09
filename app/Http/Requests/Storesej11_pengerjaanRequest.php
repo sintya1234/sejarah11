@@ -24,7 +24,7 @@ class Storesej11_pengerjaanRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'opsi_pg'  => 'required',
         ];
     }
 }

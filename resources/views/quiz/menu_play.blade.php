@@ -8,7 +8,6 @@
     <a href="/quiz/{{$sej11_level->id}}/soal1" class="btn btn-outline-danger">Start</a>
 </div>
 <div class="d-grid gap-2 mb-3 mx-auto">
-    {{-- <button type="button" ></button> --}}
     <a href="/kumpulan-materi/{{ $sej11_level->id }}" class="btn btn-outline-warning">Baca Materi</a>
 </div>
 <div class="d-grid gap-2 mb-3 mx-auto">

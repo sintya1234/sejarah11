@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\adminSoalDashboard;
+use App\Http\Controllers\adminUserDashboard;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\sej11_soalController;
@@ -57,16 +59,11 @@ Route::get('/quiz/{sej11_Level}/soal9', [Sej11LevelController::class, 'quiz_soal
 Route::get('/quiz/{sej11_Level}/soal10', [Sej11LevelController::class, 'quiz_soal_show_10']);
 
 
-//
+//post
 
 Route::post('/quiz/{sej11_Level}/soal1', [Sej11PengerjaanController::class, 'store_soal1']);
 Route::post('/quiz/{sej11_Level}/soal2', [Sej11PengerjaanController::class, 'store_soal2']);
-
-
 Route::post('/quiz/{sej11_Level}/soal3', [Sej11PengerjaanController::class, 'store_soal3']);
-
-
-
 Route::post('/quiz/{sej11_Level}/soal4', [Sej11PengerjaanController::class, 'store_soal4']);
 Route::post('/quiz/{sej11_Level}/soal5', [Sej11PengerjaanController::class, 'store_soal5']);
 Route::post('/quiz/{sej11_Level}/soal6', [Sej11PengerjaanController::class, 'store_soal6']);
@@ -76,8 +73,12 @@ Route::post('/quiz/{sej11_Level}/soal9', [Sej11PengerjaanController::class, 'sto
 Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'store_soal10']);
 
 
-Route::get('/quiz/{sej11_Level}/akhir_soal', [Sej11UserLevelController::class, 'show_akhir_soal']);
+//Route::get('/quiz/{sej11_Level}/akhir_soal', [Sej11UserLevelController::class, 'akhir_soal']);
+Route::get('/quiz/{sej11_Level}/leaderboard', [Sej11UserLevelController::class, 'leaderboard_show']);
 
+
+Route::resource('/dashboard/students', adminUserDashboard::class);
+Route::resource('/dashboard/soals', adminSoalDashboard::class);
 
 
 Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth');

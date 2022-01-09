@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\sej11_pengerjaan;
 use App\Http\Requests\Storesej11_pengerjaanRequest;
 use App\Http\Requests\Updatesej11_pengerjaanRequest;
+use App\Models\Sej11_Level;
 use App\Models\Sej11_opsi_pilgan;
 use App\Models\Sej11_soal;
+use App\Models\sej11_user_level;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,15 +45,17 @@ class Sej11PengerjaanController extends Controller
     public function store_soal1(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
+        //  dd($sepg);
+
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
@@ -60,29 +64,27 @@ class Sej11PengerjaanController extends Controller
 
         $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
         return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_2'],  [$sej11_level_id]);
-       
-
     }
 
     public function store_soal2(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-        dd($check);
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
 
         $pengerjaan->save();
         //dd($pengerjaan->save());
-     
+
         $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
         return redirect()->action([Sej11LevelController::class, 'quiz_soal_show_3'],  [$sej11_level_id]);
     }
@@ -90,15 +92,15 @@ class Sej11PengerjaanController extends Controller
     public function store_soal3(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-  
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
@@ -112,15 +114,15 @@ class Sej11PengerjaanController extends Controller
     public function store_soal4(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
@@ -134,15 +136,15 @@ class Sej11PengerjaanController extends Controller
     public function store_soal5(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
@@ -156,15 +158,15 @@ class Sej11PengerjaanController extends Controller
     public function store_soal6(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
@@ -178,15 +180,15 @@ class Sej11PengerjaanController extends Controller
     public function store_soal7(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
@@ -200,15 +202,15 @@ class Sej11PengerjaanController extends Controller
     public function store_soal8(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
@@ -223,15 +225,15 @@ class Sej11PengerjaanController extends Controller
     public function store_soal9(Storesej11_pengerjaanRequest $request)
     {
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg === 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
@@ -244,35 +246,69 @@ class Sej11PengerjaanController extends Controller
 
     public function store_soal10(Storesej11_pengerjaanRequest $request)
     {
+
+
         $check = $request->input('opsi_pg');
-        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->get('status_benar');
+        $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
-      
+
         $pengerjaan = new sej11_pengerjaan();
         $pengerjaan->sej11_user_level_id =  null;
-        if ($sepg ===1) {
-            $pengerjaan->status_pengerjaan  = 1;      
+        if ($sepg == 1) {
+            $pengerjaan->status_pengerjaan  = 1;
         } else {
-            $pengerjaan->status_pengerjaan  = 0 ;
+            $pengerjaan->status_pengerjaan  = 0;
         }
 
         $pengerjaan->sej11_soal_id = $sej11_soal;
 
         $pengerjaan->save();
 
-        $sej11_level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
+        // 1. cari level yang dimainkan 
+        $sej11__level_id = Sej11_soal::where('id', $sej11_soal)->value('sej11__level_id');
 
-        return redirect()->action([Sej11UserLevelController::class, 'show_akhir_soal'],  [$sej11_level_id]);
-        
+        //ini mau store data ke tabel sej11_user_level
+        $sej11_user_level = new sej11_user_level();
+        $sej11_user_level->sej11__level_id = $sej11__level_id;
+        $sej11_user_level->user_id = auth()->user()->id;
+
+        $jumlah_soal_benar = Sej11_soal::where('sej11__level_id', '=', $sej11__level_id)
+            ->join('sej11_pengerjaans', 'sej11_pengerjaans.sej11_soal_id', '=', 'sej11_soals.id')
+            ->where('sej11_pengerjaans.sej11_user_level_id', "=", null)
+            ->where('sej11_pengerjaans.status_pengerjaan', '=', 1)
+            ->get()->count();
+
+        $score_level_ini = 0;
+        $score_level_ini = $jumlah_soal_benar * 10;
+
+        $sej11_user_level->score = $score_level_ini; 
+        $sej11_user_level->save();
+
+        $sej11_user_level_id = value($sej11_user_level->id);
+
+        sej11_pengerjaan::where('sej11_user_level_id', "=", null)
+            ->update([
+                'sej11_user_level_id' => $sej11_user_level_id
+            ]);
+
+
+        //return redirect()->action([Sej11UserLevelController::class, 'akhir_soal'],  [$sej11__level_id]);
+    
+        $last_id_sej_user_level=sej11_user_level::latest('created_at')->first()->id;    
+        $show_gambar = sej11_pengerjaan::where('sej11_user_level_id', '=', $last_id_sej_user_level)
+        ->where('status_pengerjaan', '=', 1)
+        ->join('sej11_soals', 'sej11_soals.id', '=', 'sej11_pengerjaans.sej11_soal_id')
+        ->whereNotNull('sej11_soals.potongan_gambar')->get();
+
+        $sej11_soal = Sej11_soal::where('id', $sej11_soal)->get();
+        return view('quiz/soal/akhir_soal', [
+            'show_gambars' => $show_gambar,
+            'sej11_soal'=>$sej11_soal,
+            'sej11_user_level'=> sej11_user_level::where('id', $last_id_sej_user_level)->value('score')
+        ]);
+    
+    
     }
-    
-
-    
-
-    
-
-   
-    
     /**
      * Display the specified resource.
      *

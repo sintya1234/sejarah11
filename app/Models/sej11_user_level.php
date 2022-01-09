@@ -18,7 +18,7 @@ class sej11_user_level extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class,'user_id','user');
+        return $this->belongsTo(User::class,'user_id','id');
     }
 
     public function sej11_level()

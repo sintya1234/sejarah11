@@ -10,7 +10,7 @@
     {{-- <h3>school: {{  auth()->user()->school}}</h3> --}}
     {{-- <h3>birthyear: {{auth()->user()->birthyear}}</h3> --}}
 
-    {{-- <a href="/profile/edit" class="btn btn-info"><span data-feather="edit"></span></a> --}}
+    <a href="/profile/edit" class="btn btn-info"><span data-feather="edit"></span></a> 
 
     {{-- https://www.bootdey.com/snippets/view/profile-with-data-and-skills#html --}}
     <div class="container">
@@ -38,8 +38,16 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                                @if (auth()->user()->photo)
+                                <div>
+                                    <img src="{{ asset('storage/' . auth()->user()->photo) }}"
                                     class="rounded-circle" width="150">
+                                </div>
+                                @else
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                                class="rounded-circle" width="150">
+                                @endif
+                               
                                 <div class="mt-3">
                                     <h4> {{ auth()->user()->username }}</h4>
                                     <h5> {{auth()->user()->email}} </h5>

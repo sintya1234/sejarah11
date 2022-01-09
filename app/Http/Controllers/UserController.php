@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class UserController extends Controller
 {
     public function index()
@@ -30,6 +31,7 @@ class UserController extends Controller
     public function store()
     {
         //
+      
     }
 
     /**
@@ -63,7 +65,8 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $request->validate([
+       // return $request->file('photo')->store('post-photos');
+     $validatedDate = $request->validate([
              'name' => 'required',
              'email' => 'required|email',
              'username' => 'required|min:3|max:255',
@@ -71,8 +74,13 @@ class UserController extends Controller
              'school' => 'required|string',
              'city' => 'required|string',
              'birthyear' => 'required|string',
+             'photo' => 'required|file|max:5120'
          ]);
+         if($request->file('photo')){
+            $validatedDate['photo'] =  $request->file('photo')->store('post-photos');
+         }
     
+       //  User::create($validatedDate);
         User::where('id', $user->id)
             ->update([
                 'name' => $request->name,
@@ -83,7 +91,7 @@ class UserController extends Controller
                 'city' => $request->city,
                 'birthyear' => $request->birthyear,
                 'password' =>  $request->password,
-                'photo' =>  $request->photo
+                'photo' =>  $validatedDate
             ]);
 
         return redirect('/profile')->with('status', 'Data telah berhasil diubah');

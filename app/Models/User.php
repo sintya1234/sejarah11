@@ -25,6 +25,7 @@ class User extends Authenticatable
         'school',
         'city',
         'birthyear',
+        'photo',
         'created_at',
         'email_verified_at',
         'is_login',

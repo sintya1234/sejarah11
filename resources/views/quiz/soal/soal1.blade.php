@@ -3,8 +3,8 @@
 @section('container')
 
     <p>timer</p>
-    {{ dd($sej11_soal) }}
-    <H1>{{ $sej11_soal->soal }}</H1>
+
+    <H1>{{ $sej11_soal[0]->soal }}</H1>
 
     <form action="/quiz/{{ $sej11_soal[0]->sej11_level->id }}/soal1" method="POST" name="soal1">
       @csrf

@@ -11,7 +11,7 @@
 
     <div class="d-grid gap-2 mb-3 mx-auto">
         {{-- <button type="button" class="btn btn-outline-primary">Profile</button> --}}
-        <a href="/quiz/{{ $sej11_soal[0]->sej11__level_id }}/leaderboard" class="btn btn-outline-primary">Kembali</a>
+        <a href="/quiz/{{ $sej11_soal[0]->sej11__level_id }}/leaderboard" class="btn btn-outline-primary">leaderboard</a>
    
     </div>
 

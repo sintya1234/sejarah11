@@ -73,8 +73,9 @@ class UserController extends Controller
              'password' => 'required|string',
              'school' => 'required|string',
              'city' => 'required|string',
-             'birthyear' => 'required|string',
-             'photo' => 'required|file|max:5120'
+             'photo' => 'required|mimes:jpg,jpeg,png',
+             'birthyear' => 'required|string'
+            
          ]);
          if($request->file('photo')){
             $validatedDate['photo'] =  $request->file('photo')->store('post-photos');

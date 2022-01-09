@@ -10,7 +10,7 @@
     {{-- <h3>school: {{  auth()->user()->school}}</h3> --}}
     {{-- <h3>birthyear: {{auth()->user()->birthyear}}</h3> --}}
 
-    <a href="/profile/edit" class="btn btn-info"><span data-feather="edit"></span></a> 
+    {{-- <a href="/profile/edit" class="btn btn-info"><span data-feather="edit"></span></a>  --}}
 
     {{-- https://www.bootdey.com/snippets/view/profile-with-data-and-skills#html --}}
     <div class="container">

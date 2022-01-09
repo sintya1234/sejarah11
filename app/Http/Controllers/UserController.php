@@ -92,7 +92,7 @@ class UserController extends Controller
                 'city' => $request->city,
                 'birthyear' => $request->birthyear,
                 'password' =>  $request->password,
-                'photo' =>  $validatedDate
+                'photo' =>  $request->photo
             ]);
 
         return redirect('/profile')->with('status', 'Data telah berhasil diubah');

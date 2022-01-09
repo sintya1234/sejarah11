@@ -84,7 +84,7 @@ Route::resource('/dashboard/soals', adminSoalDashboard::class);
 Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth');
 
 Route::get('/profile/{user}/edit', [UserController::class, 'edit']);
-Route::put('/profile/{user}/show', [UserController::class, 'update']);
+Route::put('/profile/{user}', [UserController::class, 'update']);
 
  Route::get('/profile', function () {
      return view('/profile/show');

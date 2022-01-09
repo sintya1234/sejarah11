@@ -36,15 +36,15 @@
                             <li>
                                 <form action="/logout" method="post">
                                     @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
+                                    <button type="submit" class="dropdown-item bg-light">Logout</button>
                                 </form>
                             </li>
 
                         </ul>
                     </li>
                 @else
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
+                    <ul class="navbar- nav ms-auto bg-dark">
+                        <li class="nav-item bg-light">
                             <a href="/login" class="nav-link"><i
                                     class="bi bi-box-arrow-in-right"></i>Login</a>
                         </li>

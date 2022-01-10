@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Sej11_Leaderboard;
 use App\Http\Requests\StoreSej11_LeaderboardRequest;
 use App\Http\Requests\UpdateSej11_LeaderboardRequest;
+use App\Models\sej11_user_level;
+use App\Models\User;
 
 class Sej11LeaderboardController extends Controller
 {
@@ -15,7 +17,17 @@ class Sej11LeaderboardController extends Controller
      */
     public function index()
     {
-        //
+        $sej11_Leaderboards=Sej11_Leaderboard::orderByDesc('total_skor')
+        ->get();
+
+        //dd($sej11_Leaderboards);
+
+        $sej11_user_levels=sej11_user_level::max('sej11__level_id');
+
+        return view('/leaderboard_utama', [
+            'sej11_Leaderboards' => $sej11_Leaderboards,
+            'sej11_user_levels'=> $sej11_user_levels
+        ]);
     }
 
     /**
@@ -47,7 +59,7 @@ class Sej11LeaderboardController extends Controller
      */
     public function show(Sej11_Leaderboard $sej11_Leaderboard)
     {
-        //
+        
     }
 
     /**

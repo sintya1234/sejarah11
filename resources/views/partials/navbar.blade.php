@@ -8,23 +8,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="/menu">Menu</a>
+                    <a class="nav-link {{ Request::is('menu')?'active':'' }}" href="/menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/kumpulan-materi">Baca materi</a>
+                    <a class="nav-link {{ Request::is('kumpulan-materi')?'active':'' }}" href="/kumpulan-materi">Baca materi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/quiz">Quiz</a>
+                    <a class="nav-link {{ Request::is('quiz')?'active':'' }}" href="/quiz">Quiz</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link "
-                        href="/leaderboard">Leaderboard</a>
+                    <a class="nav-link {{ Request::is('leaderboard_utama')?'active':'' }}"
+                        href="/leaderboard_utama">Leaderboard</a>
                 </li>
             </ul>
             <ul class="navbar- nav ms-auto">
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ auth()->user()->name }}
                         </a>
@@ -44,7 +44,7 @@
                     </li>
                 @else
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::is('/login')?'active':'' }}">
                             <a href="/login" class="nav-link"><i
                                     class="bi bi-box-arrow-in-right"></i>Login</a>
                         </li>

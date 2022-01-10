@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateSej11_LevelRequest;
 use App\Models\Sej11_gambar_materi;
 use App\Models\Sej11_opsi_pilgan;
 use App\Models\Sej11_soal;
+use App\Models\sej11_user_level;
 
 class Sej11LevelController extends Controller
 {
@@ -98,8 +99,16 @@ class Sej11LevelController extends Controller
     }
 
     public function quiz_index(){
+        $sej11_user_level=sej11_user_level::where('user_id',auth()->user()->id)
+        ->latest('created_at')->value('score');
+
+        $batas=$sej11_user_level<=80;
+
+    
+     //   dd($sej11_user_level);
         return view('/quiz/pilihan_level', [
-            'sej11_level' => Sej11_Level::all()
+            'sej11_level' => Sej11_Level::all(),
+            'sej11_user_level'=> $sej11_user_level
         ]);
     }
 

@@ -16,7 +16,8 @@ class CreateSej11UserLevelsTable extends Migration
         Schema::create('sej11_user_levels', function (Blueprint $table) {
             $table->id();
             $table->foreignId('sej11__level_id');
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')->references('id')->on('users')
+            ->onDelete('cascade');
             $table->bigInteger('score');
             $table->timestamps();
         });

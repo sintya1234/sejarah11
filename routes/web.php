@@ -5,6 +5,7 @@ use App\Http\Controllers\adminUserDashboard;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\sej11_soalController;
+use App\Http\Controllers\Sej11LeaderboardController;
 use App\Http\Controllers\Sej11LevelController;
 use App\Http\Controllers\Sej11PengerjaanController;
 use App\Http\Controllers\Sej11SoalController;
@@ -75,6 +76,7 @@ Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'st
 
 //Route::get('/quiz/{sej11_Level}/akhir_soal', [Sej11UserLevelController::class, 'akhir_soal']);
 Route::get('/quiz/{sej11_Level}/leaderboard', [Sej11UserLevelController::class, 'leaderboard_show']);
+Route::get('/leaderboard_utama', [Sej11LeaderboardController::class, 'index']);
 
 
 Route::resource('/dashboard/students', adminUserDashboard::class);

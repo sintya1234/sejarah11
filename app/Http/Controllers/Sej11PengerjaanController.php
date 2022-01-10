@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\sej11_pengerjaan;
 use App\Http\Requests\Storesej11_pengerjaanRequest;
 use App\Http\Requests\Updatesej11_pengerjaanRequest;
+use App\Models\Sej11_Leaderboard;
 use App\Models\Sej11_Level;
 use App\Models\Sej11_opsi_pilgan;
 use App\Models\Sej11_soal;
@@ -281,8 +282,17 @@ class Sej11PengerjaanController extends Controller
         $score_level_ini = 0;
         $score_level_ini = $jumlah_soal_benar * 10;
 
-        $sej11_user_level->score = $score_level_ini; 
+        $sej11_user_level->score = $score_level_ini;
         $sej11_user_level->save();
+
+        $ngitung_index = sej11_user_level::where('sej11__level_id', $sej11__level_id)
+            ->where('user_id', auth()->user()->id)->count();
+
+        if ($ngitung_index > 1) {
+            $pertama = sej11_user_level::where('sej11__level_id', $sej11__level_id)
+                ->where('user_id', auth()->user()->id)->first();
+            sej11_user_level::destroy($pertama->id);
+        }
 
         $sej11_user_level_id = value($sej11_user_level->id);
 
@@ -291,23 +301,40 @@ class Sej11PengerjaanController extends Controller
                 'sej11_user_level_id' => $sej11_user_level_id
             ]);
 
+        //   Mau simpen di leaderboard
+        $User_score = User::where('id', auth()->user()->id)
+            ->withSum('sej11__levels', 'sej11_user_levels.score')
+            ->value('sej11__levels_sum_sej11_user_levelsscore');
+
+        $sej11_leaderboard = new Sej11_Leaderboard();
+        $sej11_leaderboard->user_id =  auth()->user()->id;
+        $sej11_leaderboard->total_skor = $User_score;
+        $sej11_leaderboard->save();
+
+        //update di Leaderboard
+
+        $ngitung_index_leaderboard = Sej11_Leaderboard::where('user_id', auth()->user()->id)->count();
+
+        if ($ngitung_index_leaderboard > 1) {
+            $pertama = Sej11_Leaderboard::where('user_id', auth()->user()->id)->first();
+                Sej11_Leaderboard::destroy($pertama->id);
+        }
 
         //return redirect()->action([Sej11UserLevelController::class, 'akhir_soal'],  [$sej11__level_id]);
-    
-        $last_id_sej_user_level=sej11_user_level::latest('created_at')->first()->id;    
+
+        //kirim potongan gambar
+        $last_id_sej_user_level = sej11_user_level::latest('created_at')->first()->id;
         $show_gambar = sej11_pengerjaan::where('sej11_user_level_id', '=', $last_id_sej_user_level)
-        ->where('status_pengerjaan', '=', 1)
-        ->join('sej11_soals', 'sej11_soals.id', '=', 'sej11_pengerjaans.sej11_soal_id')
-        ->whereNotNull('sej11_soals.potongan_gambar')->get();
+            ->where('status_pengerjaan', '=', 1)
+            ->join('sej11_soals', 'sej11_soals.id', '=', 'sej11_pengerjaans.sej11_soal_id')
+            ->whereNotNull('sej11_soals.potongan_gambar')->get();
 
         $sej11_soal = Sej11_soal::where('id', $sej11_soal)->get();
         return view('quiz/soal/akhir_soal', [
             'show_gambars' => $show_gambar,
-            'sej11_soal'=>$sej11_soal,
-            'sej11_user_level'=> sej11_user_level::where('id', $last_id_sej_user_level)->value('score')
+            'sej11_soal' => $sej11_soal,
+            'sej11_user_level' => sej11_user_level::where('id', $last_id_sej_user_level)->value('score')
         ]);
-    
-    
     }
     /**
      * Display the specified resource.

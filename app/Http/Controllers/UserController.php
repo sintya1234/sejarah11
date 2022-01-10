@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class UserController extends Controller
 {
     public function index()
@@ -30,6 +31,7 @@ class UserController extends Controller
     public function store()
     {
         //
+      
     }
 
     /**
@@ -63,16 +65,23 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $request->validate([
+       // return $request->file('photo')->store('post-photos');
+     $validatedDate = $request->validate([
              'name' => 'required',
              'email' => 'required|email',
              'username' => 'required|min:3|max:255',
              'password' => 'required|string',
              'school' => 'required|string',
              'city' => 'required|string',
-             'birthyear' => 'required|string',
+             'photo' => 'required|mimes:jpg,jpeg,png',
+             'birthyear' => 'required|string'
+            
          ]);
+         if($request->file('photo')){
+            $validatedDate['photo'] =  $request->file('photo')->store('post-photos');
+         }
     
+       //  User::create($validatedDate);
         User::where('id', $user->id)
             ->update([
                 'name' => $request->name,

@@ -88,9 +88,9 @@ Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth')
 Route::get('/profile/{user}/edit', [UserController::class, 'edit']);
 Route::put('/profile/{user}', [UserController::class, 'update']);
 
-Route::get('/profile', function () {
-    return view('/profile/show');
-});
+ Route::get('/profile', function () {
+     return view('/profile/show');
+ });
 
 Route::get('/afterlogin', function () {
     return view('menu/afterlogin');

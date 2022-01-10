@@ -14,13 +14,13 @@
         <h1 class="h2">Edit Profile</h1>
     </div>
     <div class="form-group">
-        <form method="post" action="/profile/{{ auth()->user()->id }}" class="mb-5">
+        <form method="post" action="/profile/{{ auth()->user()->id }}" class="mb-5" enctype="multipart/form-data">
             {{-- ost-ost-">postkepostdikebungmasukkes --}}
             @method('put')
             @csrf
     </div>
 
-    <form>
+   
        <div class="form-group"> 
         <label for="name" class="form-label">Name</label>
         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required
@@ -81,6 +81,19 @@
                 @enderror
             
         </div>
+
+        
+        {{-- <div class="form-group"> 
+            <label for="birthyear" class="form-label">Foto</label>
+            <input type="text" class="form-control @error('photo') is-invalid @enderror" id="photo"
+                name="photo" required value="{{ old('photo', auth()->user()->photo) }}">
+            @error('photo')
+         
+                    {{ $message }}
+                @enderror
+            
+        </div>
+
 
             
             {{-- <div class="form-group"> 
@@ -162,6 +175,14 @@
                     @enderror
                 </div>
             </div>--}}
+
+          
+            <div class="form-group mt-3">
+                <label for="photo" class="form-label">Select a New Photo :</label>
+                <input class="form-control" type="file" id="photo" name="photo" required>
+            
+            </div>
+
           <br>
     <button type="submit" class="btn btn-primary">Update Profile</button>
 

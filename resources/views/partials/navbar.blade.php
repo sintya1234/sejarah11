@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
         <a class="navbar-brand" href="/">Sejarah11</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -21,7 +21,7 @@
                         href="/leaderboard_utama">Leaderboard</a>
                 </li>
             </ul>
-            <ul class="navbar- nav ms-auto">
+            <ul class="navbar- nav ms-auto bg-light">
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -36,7 +36,7 @@
                             <li>
                                 <form action="/logout" method="post">
                                     @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
+                                    <button type="submit" class="dropdown-item bg-light">Logout</button>
                                 </form>
                             </li>
 
@@ -45,6 +45,8 @@
                 @else
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item {{ Request::is('/login')?'active':'' }}">
+                    <ul class="navbar- nav ms-auto bg-dark">
+                        <li class="nav-item bg-light">
                             <a href="/login" class="nav-link"><i
                                     class="bi bi-box-arrow-in-right"></i>Login</a>
                         </li>

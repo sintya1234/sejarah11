@@ -16,7 +16,7 @@ class CreateSej11SoalsTable extends Migration
         Schema::create('sej11_soals', function (Blueprint $table) {
             $table->id();
             $table->foreignId('sej11__level_id');
-            $table->foreignId('sej11_waktu_id');
+            $table->foreignId('sej11_waktu_id')->nullable();
             $table->string('potongan_gambar')->nullable();
             $table->text('soal');
             $table->timestamps();

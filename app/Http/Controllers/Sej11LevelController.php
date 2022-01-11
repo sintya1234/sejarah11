@@ -99,21 +99,28 @@ class Sej11LevelController extends Controller
     }
 
     public function quiz_index(){
-        $sej11_user_level=sej11_user_level::where('user_id',auth()->user()->id)
-        ->latest('created_at')->value('score');
+        // $sej11_Level=sej11_level::all();
+        // $check=Sej11_user_level::where('sej11__level_id',($sej11_Level->id-1))
+        // ->where('user_id',auth()->user()->id)
+        // ->where('score','>=',80);
 
-        $batas=$sej11_user_level<=80;
+
+        $sej11_user_level=sej11_user_level::where('user_id',auth()->user()->id)->get();
+
+        // $batas=$sej11_user_level<=80;
 
     
      //   dd($sej11_user_level);
         return view('/quiz/pilihan_level', [
             'sej11_level' => Sej11_Level::all(),
             'sej11_user_level'=> $sej11_user_level
+           // 'check'=>$check
         ]);
     }
 
     public function menu_play_show(Sej11_Level $sej11_Level)
     {
+        
         return view('quiz/menu_play', [
             "sej11_level" => $sej11_Level
         ]);
@@ -196,45 +203,7 @@ class Sej11LevelController extends Controller
         return view('quiz/soal/soal10', [  
             "sej11_soal" => $sej11_soal
         ]);
-    }
-
-    public function quiz_soal_show_11(Sej11_Level $sej11_Level)
-    {
-        $sej11_soal=Sej11_soal::where('sej11__level_id',$sej11_Level->id)->get();      
-        return view('quiz/soal/soal11', [  
-            "sej11_soal" => $sej11_soal
-        ]);
-    }
-
-    public function quiz_soal_show_12(Sej11_Level $sej11_Level)
-    {
-        $sej11_soal=Sej11_soal::where('sej11__level_id',$sej11_Level->id)->get();      
-        return view('quiz/soal/soal12', [  
-            "sej11_soal" => $sej11_soal
-        ]);
-    }
-
-    public function quiz_soal_show_13(Sej11_Level $sej11_Level)
-    {
-        $sej11_soal=Sej11_soal::where('sej11__level_id',$sej11_Level->id)->get();      
-        return view('quiz/soal/soal13', [  
-            "sej11_soal" => $sej11_soal
-        ]);
-    }
-
-    public function quiz_soal_show_14(Sej11_Level $sej11_Level)
-    {
-        $sej11_soal=Sej11_soal::where('sej11__level_id',$sej11_Level->id)->get();      
-        return view('quiz/soal/soal14', [  
-            "sej11_soal" => $sej11_soal
-        ]);
-    }
-    public function quiz_soal_show_15(Sej11_Level $sej11_Level)
-    {
-        $sej11_soal=Sej11_soal::where('sej11__level_id',$sej11_Level->id)->get();      
-        return view('quiz/soal/soal15', [  
-            "sej11_soal" => $sej11_soal
-        ]);
+    
     }
     // public function store_soal1(StoreSej11_LevelRequest $request)
     // {

@@ -10,9 +10,8 @@
 <div class="d-grid gap-2 mb-3 mx-auto">
     <a href="/kumpulan-materi/{{ $sej11_level->id }}" class="btn btn-outline-warning">Baca Materi</a>
 </div>
-<div class="d-grid gap-2 mb-3 mx-auto">
-    <button type="button" class="btn btn-outline-success">Leaderboard</button>
-</div>
+
+
 <div class="d-grid gap-2 mb-3 mx-auto">
     {{-- <button type="button" class="btn btn-outline-primary">Profile</button> --}}
     <a href="/quiz" class="btn btn-outline-primary">Kembali</a>

@@ -33,10 +33,7 @@ class Sej11_soal extends Model
         return $this->hasMany(sej11_opsi_pilgan::class,'sej11_soal_id','id');
     }
 
-    public function sej11_opsi_isians()
-    {
-        return $this->belongsTo(sej11_opsi_isian::class);
-    }
+   
 
     public function sej11_user_levels()
     {

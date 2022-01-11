@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\adminSoalDashboard;
-use App\Http\Controllers\adminUserDashboard;
+
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\sej11_soalController;
@@ -14,6 +13,7 @@ use App\Http\Controllers\UserController;
 use App\Models\sej11_soal;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardLevelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,9 +78,9 @@ Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'st
 Route::get('/quiz/{sej11_Level}/leaderboard', [Sej11UserLevelController::class, 'leaderboard_show']);
 Route::get('/leaderboard_utama', [Sej11LeaderboardController::class, 'index']);
 
-
-Route::resource('/dashboard/students', adminUserDashboard::class);
-Route::resource('/dashboard/soals', adminSoalDashboard::class);
+Route::resource('/dashboard/levels', DashboardLevelController::class)->middleware('auth');
+// Route::get('/dashboard/levels', DashboardLevelController::class, 'index')->middleware('auth');
+// Route::get('/dashboard/levels/{sej11_level}', DashboardLevelController::class,'show')->middleware('auth');
 
 
 Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth');

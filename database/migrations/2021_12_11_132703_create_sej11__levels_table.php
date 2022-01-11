@@ -16,7 +16,7 @@ class CreateSej11LevelsTable extends Migration
         //level up
         Schema::create('sej11__levels', function (Blueprint $table) {
             $table->id();
-            $table->string('gambar_utuh');
+            $table->string('gambar_utuh')->nullable();
             $table->string('judul_sub_bab');
             $table->Text('materi');
             $table->timestamps();

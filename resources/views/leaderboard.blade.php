@@ -19,8 +19,11 @@
         @endforeach
     </table>
     <div class="d-grid gap-2 mb-3 mx-auto">
-        {{-- <button type="button" class="btn btn-outline-primary">Profile</button> --}}
         <a href="/leaderboard_utama" class="btn btn-outline-primary">Leaderboard Utama</a>
+    </div>
+
+    <div class="d-grid gap-2 mb-3 mx-auto">     
+        <a href="/quiz" class="btn btn-outline-primary">Back to Quiz</a>
     </div>
 
 

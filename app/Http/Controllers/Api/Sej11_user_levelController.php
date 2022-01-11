@@ -16,6 +16,7 @@ class Sej11_user_levelController extends Controller
      */
     public function index()
     {
+        
         $Sej11_user_level=sej11_user_level::all();
         return sej11_user_levelResources::collection($Sej11_user_level);
     

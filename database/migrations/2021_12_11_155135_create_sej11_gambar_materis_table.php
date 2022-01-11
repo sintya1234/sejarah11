@@ -16,7 +16,7 @@ class CreateSej11GambarMaterisTable extends Migration
         Schema::create('sej11_gambar_materis', function (Blueprint $table) {
             $table->id();
             $table->foreignId('sej11__level_id');
-            $table->string('gambar_materi');
+            $table->string('gambar_materi')->nullable();
             $table->timestamps();
         });
     }

@@ -443,8 +443,7 @@ trix-editor .attachment__metadata .attachment__size {
     white-space: nowrap;
 }
 
-
-/* @charset "UTF-8";
+@charset "UTF-8";
 .trix-content {
     line-height: 1.5;
 }
@@ -560,4 +559,4 @@ trix-editor .attachment__metadata .attachment__size {
 .trix-content .attachment-gallery.attachment-gallery--4 .attachment {
     flex-basis: 50%;
     max-width: 50%;
-} */
+}

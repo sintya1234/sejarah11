@@ -32,7 +32,7 @@
                         @error('materi')
                             <p class="text-danger"> {{ $message }}</p>
                         @enderror
-                        <input id="body" type="hidden" name="materi" value="{{ old('materi') }}">
+                        <input id="materi" type="hidden" name="materi" value="{{ old('materi') }}">
                         <trix-editor input="materi"></trix-editor>
                     </div>
 

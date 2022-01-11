@@ -7,19 +7,35 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+               
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('menu')?'active':'' }}" href="/menu">Menu</a>
+                    <a class="nav-link {{ Request::is('menu') ? 'active' : '' }}" href="/menu">Menu</a>
                 </li>
+              
+               
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('kumpulan-materi')?'active':'' }}" href="/kumpulan-materi">Baca materi</a>
+                    <a class="nav-link {{ Request::is('kumpulan-materi*') ? 'active' : '' }}" href="/kumpulan-materi">Baca
+                        materi</a>
                 </li>
+             
+               
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('quiz')?'active':'' }}" href="/quiz">Quiz</a>
+                    <a class="nav-link {{ Request::is('quiz*') ? 'active' : '' }}" href="/quiz">Quiz</a>
                 </li>
+            
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('leaderboard_utama')?'active':'' }}"
+                    <a class="nav-link {{ Request::is('leaderboard_utama') ? 'active' : '' }}"
                         href="/leaderboard_utama">Leaderboard</a>
                 </li>
+               
+
+                @can('admin')
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('dashboard/levels') ? 'active' : '' }}"
+                            href="/dashboard/levels">Leaderboard</a>
+                    </li>
+                @endcan
+
             </ul>
             <ul class="navbar- nav ms-auto bg-light">
                 @auth
@@ -44,15 +60,15 @@
                     </li>
                 @else
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item {{ Request::is('/login')?'active':'' }}">
-                    <ul class="navbar- nav ms-auto bg-dark">
-                        <li class="nav-item bg-light">
-                            <a href="/login" class="nav-link"><i
-                                    class="bi bi-box-arrow-in-right"></i>Login</a>
-                        </li>
-                    </ul>
-                @endauth
-            </ul>
+                        <li class="nav-item {{ Request::is('/login') ? 'active' : '' }}">
+                            <ul class="navbar- nav ms-auto bg-dark">
+                                <li class="nav-item bg-light">
+                                    <a href="/login" class="nav-link"><i
+                                            class="bi bi-box-arrow-in-right"></i>Login</a>
+                                </li>
+                            </ul>
+                        @endauth
+                </ul>
 
 
         </div>

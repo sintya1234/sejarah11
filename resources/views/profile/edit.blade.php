@@ -83,7 +83,7 @@
         </div>
 
         
-        {{-- <div class="form-group"> 
+        {{-- {{-- <div class="form-group"> 
             <label for="birthyear" class="form-label">Foto</label>
             <input type="text" class="form-control @error('photo') is-invalid @enderror" id="photo"
                 name="photo" required value="{{ old('photo', auth()->user()->photo) }}">
@@ -92,7 +92,7 @@
                     {{ $message }}
                 @enderror
             
-        </div>
+        </div> --}}
 
 
             
@@ -165,25 +165,29 @@
             </div>
             
             
-            {{-- <div class="mb-3"> 
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
-                    name="password" required value="{{ old('password', auth()->user()->password) }}">
-                @error('password')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    @enderror
-                </div>
-            </div>--}}
+           
 
           
             <div class="form-group mt-3">
                 <label for="photo" class="form-label">Select a New Photo :</label>
                 <input class="form-control" type="file" id="photo" name="photo" required>
             
-            </div>
+            </div> --}}
+
+
 
           <br>
+
+          <div class="mb-3"> 
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
+                name="password" required value="{{ old('password', auth()->user()->password) }}">
+            @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                @enderror
+            </div>
+        </div>
     <button type="submit" class="btn btn-primary">Update Profile</button>
 
     </form>

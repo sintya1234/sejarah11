@@ -629,56 +629,56 @@ class DatabaseSeeder extends Seeder
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 1,
             'soal' => "Kapan Perang Dunia ke 1 dimulai?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece01.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 1,
             'soal' => "Apa penyebab terjadinya Perang Dunia ke 1?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece02.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 1,
             'soal' => "Terdapat dua kubu yang saling berlawanan saat Perang Dunia ke 1 dimulai, apa sebutan / nama kedua kubu tersebut?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece03.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 1,
             'soal' => "Jerman dan Rusia saling bermusuhan menjelang Perang Dunia I karena",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece04.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 2,
             'soal' => "Perang dunia I terkenal akan adanya perang parit, dimana para tentara berlindung di dalam parit untuk menunggu musuh datang atau sekedar mempertahankan garis wilayah, salah satu pertempuran parit terbesar di Perang Dunia I adalah ",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece05.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 2,
             'soal' => "Salah satu tindak kejahatan di Perang Dunia I dengan tujuan untuk memusnahkan Sebagian atau keseluruhan etnis, kelompok dan golongan disebut",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece06.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 2,
             'soal' => "Pada saat penyerangan Jerman ke Front Barat, terdapat dua negara yang di invasi Jerman terlebih dahulu, kedua negara tersebut adalah",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
         
         sej11_soal::create([
             'sej11__level_id' => 1,
             'sej11_waktu_id' => 2,
             'soal' => "Siapakah yang memimpin Revolusi Russia saat Perang Dunia ke 1 berlangsung",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
@@ -687,7 +687,7 @@ class DatabaseSeeder extends Seeder
 
             'soal' => "Amerika Serikat menyatakan perang terhadap Jerman karena",
 
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
@@ -696,7 +696,7 @@ class DatabaseSeeder extends Seeder
 
             'soal' => "Salah satu perjanjian perdamaian antara negara-negara pihak Sekutu dan Jerman adalah Perjanjian Versailles, pada tahun berapa perjanjian tersebut ditandatangani",
 
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         //level 2
@@ -3408,15 +3408,15 @@ class DatabaseSeeder extends Seeder
        
    //waktu
         sej11_waktu::create([
-            'waktu' => 30,
-        ]);
-
-        sej11_waktu::create([
-            'waktu' => 20,
+            'waktu' => 15,
         ]);
 
         sej11_waktu::create([
             'waktu' => 10,
+        ]);
+
+        sej11_waktu::create([
+            'waktu' => 5,
         ]);
 
         User::factory(10)->create();

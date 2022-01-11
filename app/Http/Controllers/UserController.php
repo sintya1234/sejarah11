@@ -66,20 +66,17 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
        // return $request->file('photo')->store('post-photos');
-     $validatedDate = $request->validate([
+     $request->validate([
              'name' => 'required',
              'email' => 'required|email',
              'username' => 'required|min:3|max:255',
              'password' => 'required|string',
              'school' => 'required|string',
              'city' => 'required|string',
-             'photo' => 'required|mimes:jpg,jpeg,png',
              'birthyear' => 'required|string'
             
          ]);
-         if($request->file('photo')){
-            $validatedDate['photo'] =  $request->file('photo')->store('post-photos');
-         }
+    
     
        //  User::create($validatedDate);
         User::where('id', $user->id)
@@ -92,7 +89,6 @@ class UserController extends Controller
                 'city' => $request->city,
                 'birthyear' => $request->birthyear,
                 'password' =>  $request->password,
-                'photo' =>  $request->photo
             ]);
 
         return redirect('/profile')->with('status', 'Data telah berhasil diubah');

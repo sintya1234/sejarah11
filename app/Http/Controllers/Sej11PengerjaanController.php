@@ -250,7 +250,9 @@ class Sej11PengerjaanController extends Controller
 
 
         $check = $request->input('opsi_pg');
+
         $sepg = Sej11_opsi_pilgan::where('opsi_pg', $check)->first()->status_benar;
+
         $sej11_soal = Sej11_opsi_pilgan::where('opsi_pg', $check)->value('sej11_soal_id');
 
         $pengerjaan = new sej11_pengerjaan();
@@ -324,6 +326,8 @@ class Sej11PengerjaanController extends Controller
 
         //kirim potongan gambar
         $last_id_sej_user_level = sej11_user_level::latest('created_at')->first()->id;
+
+
         $show_gambar = sej11_pengerjaan::where('sej11_user_level_id', '=', $last_id_sej_user_level)
             ->where('status_pengerjaan', '=', 1)
             ->join('sej11_soals', 'sej11_soals.id', '=', 'sej11_pengerjaans.sej11_soal_id')

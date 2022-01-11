@@ -3,10 +3,10 @@
     <h1>Potongan gambar yang kamu dapat</h1>
 
     @foreach ($show_gambars as $gambar)
-        <img src="{{ $gambar }}" class="card-img-top" alt="..." class="card-img-top" alt="...">
+        <img src="{{ asset('storage/' .$gambar->sej11_soal->potongan_gambar) }}"  alt="...">
     @endforeach
 
-
+    
 
     <h1>Youre score: {{ $sej11_user_level }}</h1>
 

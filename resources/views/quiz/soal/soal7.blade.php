@@ -2,7 +2,21 @@
 
 @section('container')
 
-<p>timer</p>
+
+<script>
+  var timeleft = {{ $waktu=$sej11_soal[6]->sej11_waktu->waktu }};
+  var soalTimer = setInterval(function(){
+    if(timeleft < 0){
+      clearInterval(soalTimer);
+      document.getElementById("countdown").innerHTML = "go to next page";
+    } else {
+      document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+    }
+    timeleft -= 1;
+  }, 1000);
+</script>
+<div id="countdown"></div>
+
 <H1>{{ $sej11_soal[6]->soal }}</H1>
 
 <form action="/quiz/{{ $sej11_soal[0]->sej11_level->id }}/soal7" method="POST" name="soal7">

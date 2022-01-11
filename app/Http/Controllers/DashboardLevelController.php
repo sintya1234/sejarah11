@@ -28,6 +28,7 @@ class DashboardLevelController extends Controller
     public function create()
     {
         return view('dashboard.levels.create');
+
     }
 
     /**
@@ -57,8 +58,8 @@ class DashboardLevelController extends Controller
             'gambar_utuh' => $request->gambar_utuh,
             'materi' => $request->materi
         ]);
-
-        $id_terakhir=Sej11_level::lastest()->id->get();
+  
+        $id_terakhir=Sej11_level::latest('created_at')->first()->id;
 
         Sej11_soal::create([
             'sej11__level_id' => $id_terakhir,

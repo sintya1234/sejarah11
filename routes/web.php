@@ -37,14 +37,14 @@ Route::post('/login', [LoginController::class, 'loginWeb']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'storeWeb']);
 
-Route::get('/kumpulan-materi', [Sej11LevelController::class, 'index']);
-Route::get('/kumpulan-materi/{sej11_Level}', [Sej11LevelController::class, 'show']);
+Route::get('/kumpulan-materi', [Sej11LevelController::class, 'index'])->middleware('auth');;
+Route::get('/kumpulan-materi/{sej11_Level}', [Sej11LevelController::class, 'show'])->middleware('auth');;
 
 Route::get('/menu', function () {
     return view('/menu/index');
-});
+})->middleware('auth');;
 
-Route::get('/quiz', [Sej11LevelController::class, 'quiz_index']);
+Route::get('/quiz', [Sej11LevelController::class, 'quiz_index'])->middleware('auth');;
 Route::get('/quiz/{sej11_Level}', [Sej11LevelController::class, 'menu_play_show']);
 
 //untuk soal get soal dan pilgan quiz, maap ku belum tau cara efesiennya 
@@ -78,7 +78,7 @@ Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'st
 Route::get('/quiz/{sej11_Level}/leaderboard', [Sej11UserLevelController::class, 'leaderboard_show']);
 Route::get('/leaderboard_utama', [Sej11LeaderboardController::class, 'index']);
 
-Route::resource('/dashboard/levels', DashboardLevelController::class)->middleware('auth');
+Route::resource('/dashboard/levels', DashboardLevelController::class)->middleware('admin');
 // Route::get('/dashboard/levels', DashboardLevelController::class, 'index')->middleware('auth');
 // Route::get('/dashboard/levels/{sej11_level}', DashboardLevelController::class,'show')->middleware('auth');
 

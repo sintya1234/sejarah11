@@ -29,12 +29,12 @@
                 </li>
                
 
-                @can('admin')
+              {{-- @can('admin') --}}
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('dashboard/levels') ? 'active' : '' }}"
-                            href="/dashboard/levels">Leaderboard</a>
+                            href="/dashboard/levels">Dashboard</a>
                     </li>
-                @endcan
+                {{-- @endcan --}}
 
             </ul>
             <ul class="navbar- nav ms-auto bg-light">
@@ -62,7 +62,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item {{ Request::is('/login') ? 'active' : '' }}">
                             <ul class="navbar- nav ms-auto bg-dark">
-                                <li class="nav-item bg-light">
+                                <li class="nav-item ">
                                     <a href="/login" class="nav-link"><i
                                             class="bi bi-box-arrow-in-right"></i>Login</a>
                                 </li>

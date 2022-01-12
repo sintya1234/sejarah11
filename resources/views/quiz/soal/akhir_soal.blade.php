@@ -17,12 +17,6 @@
 
     </div>
 
-
-
-
-    <div class="d-grid gap-2 mb-3 mx-auto">
-        <button type="button" class="btn btn-outline-secondary" href="/leaderboard">Play again</button>
-    </div>
     <div class="d-grid gap-2 mb-3 mx-auto">
         {{-- <button type="button" class="btn btn-outline-primary">Profile</button> --}}
         <a href="/quiz" class="btn btn-outline-primary">Kembali</a>

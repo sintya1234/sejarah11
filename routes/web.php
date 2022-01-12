@@ -30,52 +30,51 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', [LoginController::class, 'index']);
-//->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('/login', [LoginController::class, 'loginWeb']);
 
-Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register', [RegisterController::class, 'storeWeb']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'storeWeb'])->middleware('guest');
 
-Route::get('/kumpulan-materi', [Sej11LevelController::class, 'index'])->middleware('auth');;
-Route::get('/kumpulan-materi/{sej11_Level}', [Sej11LevelController::class, 'show'])->middleware('auth');;
+Route::get('/kumpulan-materi', [Sej11LevelController::class, 'index'])->middleware('auth');
+Route::get('/kumpulan-materi/{sej11_Level}', [Sej11LevelController::class, 'show'])->middleware('auth');
 
 Route::get('/menu', function () {
     return view('/menu/index');
 })->middleware('auth');;
 
-Route::get('/quiz', [Sej11LevelController::class, 'quiz_index'])->middleware('auth');;
+Route::get('/quiz', [Sej11LevelController::class, 'quiz_index'])->middleware('auth');
 Route::get('/quiz/{sej11_Level}', [Sej11LevelController::class, 'menu_play_show']);
 
 //untuk soal get soal dan pilgan quiz, maap ku belum tau cara efesiennya 
-Route::get('/quiz/{sej11_Level}/soal1', [Sej11LevelController::class, 'quiz_soal_show_1']);
-Route::get('/quiz/{sej11_Level}/soal2', [Sej11LevelController::class, 'quiz_soal_show_2']);
-Route::get('/quiz/{sej11_Level}/soal3', [Sej11LevelController::class, 'quiz_soal_show_3']);
-Route::get('/quiz/{sej11_Level}/soal4', [Sej11LevelController::class, 'quiz_soal_show_4']);
-Route::get('/quiz/{sej11_Level}/soal5', [Sej11LevelController::class, 'quiz_soal_show_5']);
-Route::get('/quiz/{sej11_Level}/soal6', [Sej11LevelController::class, 'quiz_soal_show_6']);
-Route::get('/quiz/{sej11_Level}/soal7', [Sej11LevelController::class, 'quiz_soal_show_7']);
-Route::get('/quiz/{sej11_Level}/soal8', [Sej11LevelController::class, 'quiz_soal_show_8']);
-Route::get('/quiz/{sej11_Level}/soal9', [Sej11LevelController::class, 'quiz_soal_show_9']);
-Route::get('/quiz/{sej11_Level}/soal10', [Sej11LevelController::class, 'quiz_soal_show_10']);
+Route::get('/quiz/{sej11_Level}/soal1', [Sej11LevelController::class, 'quiz_soal_show_1'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal2', [Sej11LevelController::class, 'quiz_soal_show_2'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal3', [Sej11LevelController::class, 'quiz_soal_show_3'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal4', [Sej11LevelController::class, 'quiz_soal_show_4'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal5', [Sej11LevelController::class, 'quiz_soal_show_5'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal6', [Sej11LevelController::class, 'quiz_soal_show_6'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal7', [Sej11LevelController::class, 'quiz_soal_show_7'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal8', [Sej11LevelController::class, 'quiz_soal_show_8'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal9', [Sej11LevelController::class, 'quiz_soal_show_9'])->middleware('auth');
+Route::get('/quiz/{sej11_Level}/soal10', [Sej11LevelController::class, 'quiz_soal_show_10'])->middleware('auth');
 
 
 //post
 
-Route::post('/quiz/{sej11_Level}/soal1', [Sej11PengerjaanController::class, 'store_soal1']);
-Route::post('/quiz/{sej11_Level}/soal2', [Sej11PengerjaanController::class, 'store_soal2']);
-Route::post('/quiz/{sej11_Level}/soal3', [Sej11PengerjaanController::class, 'store_soal3']);
-Route::post('/quiz/{sej11_Level}/soal4', [Sej11PengerjaanController::class, 'store_soal4']);
-Route::post('/quiz/{sej11_Level}/soal5', [Sej11PengerjaanController::class, 'store_soal5']);
-Route::post('/quiz/{sej11_Level}/soal6', [Sej11PengerjaanController::class, 'store_soal6']);
-Route::post('/quiz/{sej11_Level}/soal7', [Sej11PengerjaanController::class, 'store_soal7']);
-Route::post('/quiz/{sej11_Level}/soal8', [Sej11PengerjaanController::class, 'store_soal8']);
-Route::post('/quiz/{sej11_Level}/soal9', [Sej11PengerjaanController::class, 'store_soal9']);
-Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'store_soal10']);
+Route::post('/quiz/{sej11_Level}/soal1', [Sej11PengerjaanController::class, 'store_soal1'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal2', [Sej11PengerjaanController::class, 'store_soal2'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal3', [Sej11PengerjaanController::class, 'store_soal3'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal4', [Sej11PengerjaanController::class, 'store_soal4'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal5', [Sej11PengerjaanController::class, 'store_soal5'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal6', [Sej11PengerjaanController::class, 'store_soal6'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal7', [Sej11PengerjaanController::class, 'store_soal7'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal8', [Sej11PengerjaanController::class, 'store_soal8'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal9', [Sej11PengerjaanController::class, 'store_soal9'])->middleware('auth');
+Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'store_soal10'])->middleware('auth');
 
 
 //Route::get('/quiz/{sej11_Level}/akhir_soal', [Sej11UserLevelController::class, 'akhir_soal']);
-Route::get('/quiz/{sej11_Level}/leaderboard', [Sej11UserLevelController::class, 'leaderboard_show']);
+Route::get('/quiz/{sej11_Level}/leaderboard', [Sej11UserLevelController::class, 'leaderboard_show'])->middleware('auth');
 Route::get('/leaderboard_utama', [Sej11LeaderboardController::class, 'index']);
 
 Route::resource('/dashboard/levels', DashboardLevelController::class)->middleware('admin');
@@ -88,9 +87,9 @@ Route::post('logout', [LoginController::class, 'logoutWeb'])->middleware('auth')
 Route::get('/profile/{user}/edit', [UserController::class, 'edit']);
 Route::put('/profile/{user}', [UserController::class, 'update']);
 
- Route::get('/profile', function () {
-     return view('/profile/show');
- });
+Route::get('/profile', function () {
+    return view('/profile/show');
+});
 
 Route::get('/afterlogin', function () {
     return view('menu/afterlogin');

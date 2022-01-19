@@ -77,7 +77,8 @@ Route::post('/quiz/{sej11_Level}/soal10', [Sej11PengerjaanController::class, 'st
 Route::get('/quiz/{sej11_Level}/leaderboard', [Sej11UserLevelController::class, 'leaderboard_show'])->middleware('auth');
 Route::get('/leaderboard_utama', [Sej11LeaderboardController::class, 'index']);
 
-Route::resource('/dashboard/levels', DashboardLevelController::class)->middleware('admin');
+Route::resource('/dashboard/levels', DashboardLevelController::class);
+// ->middleware('admin');
 // Route::get('/dashboard/levels', DashboardLevelController::class, 'index')->middleware('auth');
 // Route::get('/dashboard/levels/{sej11_level}', DashboardLevelController::class,'show')->middleware('auth');
 

@@ -706,42 +706,42 @@ class DatabaseSeeder extends Seeder
             'sej11__level_id' => 2,
             'sej11_waktu_id' => 3,
             'soal' => "Pasca Perang Dunia II, sebagai salah satu dampak dan pengaruh dari terjadinya perang, banyak negara di Asia dan Afrika yang mendapatkan momentum untuk memerdekakan diri dari penjajah, proses ini seringkali disebut juga...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece01_l2.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 2,
             'sej11_waktu_id' => 1,
             'soal' => "Perang Dunia II dimulai ketika Jerman pada 1 September 1939 menyerbu negara ...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece02_l2.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 2,
             'sej11_waktu_id' => 3,
             'soal' => "Salah satu faktor yang mendorong terjadinya Perang Dunia II adalah gagalnya kebijakan Appeasement yang dilakukan oleh Inggris dan Perancis terhadap Jerman antara lain dalam kasus...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece03_l2.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 2,
             'sej11_waktu_id' => 2,
             'soal' => "Perang Dunia II merupakan perang antara negara-negara yang berhaluan fasis melawan negara-negara sekutu, yang termasuk negara-negara berhaluan fasis pada Perang Dunia II adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 2,
             'sej11_waktu_id' => 2,
             'soal' => "Piagam San Francisco yang ditandatangani pada tahun 1945 seakan mendeklarasikan sekaligus 50 anggota asli PBB, latar belakang anggota asli PBB berjumlah 50 negara tersebut adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece04_l2.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 2,
             'sej11_waktu_id' => 1,
             'soal' => "Perang Pasifik Raya antara Jepang dan Amerika Serikat yang terjadi sejak tahun 1941 hingga 1945 dimulai semenjak terjadinya peristiwa...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece05_l2.png",
         ]);
 
         sej11_soal::create([
@@ -753,7 +753,7 @@ class DatabaseSeeder extends Seeder
             4) Wajib menjaga keutuhan dan kedaulatan bangsa
             5) PBB merupakan organisasi yang dibutuhkan dalam menjaga kedamaian dunia
             Berdasarkan data di atas, yang termasuk dalam poin-poin Piagam Atlantik ditunjukan oleh nomor...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece06_l2.png",
         ]);
 
         sej11_soal::create([
@@ -765,7 +765,7 @@ class DatabaseSeeder extends Seeder
             4. Nasionalisme
             5. Pan Islamisme
             Berdasarkan data di atas, paham-paham besar yang berkembang pasca PD II adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' =>null,
         ]);
 
         sej11_soal::create([
@@ -777,7 +777,7 @@ class DatabaseSeeder extends Seeder
             4. Inggris dan Prancis menyerbu Jerman
             5. Amerika membentuk North Atlantic Treaty Organization (NATO)
             Berdasarkan pernyataan tersebut, yang merupakan penyebab umum dari terjadinya Perang dunia II ditunjukan oleh nomor...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
@@ -790,7 +790,7 @@ class DatabaseSeeder extends Seeder
             5. Hancurnya 4 kekaisaran besar di Eropa yaitu Jerman, Austria-Hongaria, Rusia, dan Turki
             Berdasarkan data di atas yang merupakan dampak dari PD II bagi dunia 
             Internasional adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' =>null,
         ]);
 
         //level 3
@@ -798,70 +798,70 @@ class DatabaseSeeder extends Seeder
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 3,
             'soal' => "Pada tahun 1674 Inggris merebut Nieuw Amsterdam yang kemudian mengganti namanya menjadi New York. Dalam perang tujuh tahun, Inggris merebut dari Perancis daerah Canada dan Louisiana dibeli dari Perancis pada tahun 1803. Florida dibeli dari Spanyol tahun 1819. California diambil dari Mexico 1848. Alaska dibeli dari Rusia tahun 1867. Jika dilihat dari data di atas, maka diketahui bahwa sebagian besar wilayah Amerika telah dikuasai oleh negara...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece01_l3.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 2,
             'soal' => "Inggris memerintahkan bahwa hasil bumi Amerika (tembakau, gula, kapas) hanya boleh dijual kepada Inggris dan Amerika hanya diperbolehkan membeli barang-barang kebutuhannya dari Inggris saja. Dampak negatif dari Kondisi perdagangan seperti ini adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece02_l3.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 1,
             'soal' => "Protes penduduk koloni Amerika terhadap pelaksanaan penarikan pajak oleh Inggris yang dipimpin oleh...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece03_l3.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 1,
             'soal' => "Pada abad ke-17 terjadi perebutan wilayah Amerika Utara oleh tiga negara, tiga negara tersebut adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece04_l3.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 2,
             'soal' => "Pada tahun 1773, terdapat 3 kapal Inggris yang mengangkut teh untuk Amerika. Karena teh tersebut, Amerika harus membayar pajak kepada Inggris. Hal tersebut berlanjut pada pembuangan teh Inggris oleh pihak Amerika, singkat cerita Inggris dan Amerika melakukan perang. Insiden perang tersebut dikenal dengan nama...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece05_l3.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 1,
             'soal' => "Dimana pertempuran pertama Revolusi Amerika terjadi?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' =>null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 1,
             'soal' => "Negara manakah yang membeli Alaska pada tahun 1867?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece06_l3.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 1,
             'soal' => "Siapakah orang yang ditunjuk sebagai presiden pertama Amerika Serikat?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 2,
             'soal' => "Terdapat dua pemikiran yang melandasi Revolusi Amerika, yaitu...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 3,
             'sej11_waktu_id' => 1,
             'soal' => "Perjanjian perdamaian antara Inggris dan Perancis diadakan pada tahun...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         //level 4
@@ -874,42 +874,42 @@ class DatabaseSeeder extends Seeder
             4) Kemenangan Jepang atas Rusia, 1905
             5) Masuknya faham liberal
             Yang merupakan faktor internal pendorong lahirnya nasionalisme di Indonesia adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece01_l4.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 4,
             'sej11_waktu_id' => 2,
             'soal' => "Di dalam perjanjian Renville, wilayah Indonesia yang diakui Belanda hanya Sumatera, Jawa Tengah dan Jogjakarta. Daerah Jawa Barat, Madura, dan Jawa Timur tidak lagi menjadi milik RI karena...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece02_l4.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 4,
             'sej11_waktu_id' => 1,
             'soal' => "Di Indonesia semangat Reformasi Amerika mempengaruhi pergerakan nasional di Indonesia, yaitu...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece03_l4.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 4,
             'sej11_waktu_id' => 1,
             'soal' => "Pengaruh Revolusi Perancis terhadap perkembangan sejarah Indonesia adalah sebagai berikut...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece04_l4.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 4,
             'sej11_waktu_id' => 1,
             'soal' => "Nilai-nilai yang dapat diambil oleh bangsa Indonesia dengan terjadinya revolusi di berbagai negara di Eropa dan Amerika adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece05_l4.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 4,
             'sej11_waktu_id' => 1,
             'soal' => "Peristiwa yang terjadi pada masa perjuangan mempertahankan kemerdekaan dan dijadikan sebagai hari Pahlawan adalah peristiwa...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece06_l4.png",
         ]);
 
         sej11_soal::create([
@@ -921,28 +921,28 @@ class DatabaseSeeder extends Seeder
             4) Akan dibentuk Uni Indonesia-Belanda yang diketuai oleh Belanda
             5) Masalah Irian Barat akan dibicarakan kembali satu tahun setelah perjanjian
             Dari data di atas, yang merupakan isi perjanjian Linggar Jati adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 4,
             'sej11_waktu_id' => 1,
             'soal' => "Sebelum mengikuti KMB (Konferensi Meja Bundar), Indonesia melaksanakan konferensi lain yang bernama...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' =>null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 4,
             'sej11_waktu_id' => 1,
             'soal' => "Kapan Konferensi Meja Bundar diadakan?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 4,
             'sej11_waktu_id' => 1,
             'soal' => "Dimana Konferensi Meja Bundar diadakan?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         //level 5
@@ -950,70 +950,70 @@ class DatabaseSeeder extends Seeder
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 2,
             'soal' => "Pada Juli 1789, rakyat Perancis menyerbu dan menguasai penjara Bastille. Penyerbuan terhadap penjara Bastille ini menjadi simbol berakhirnya absolute monarchi di Perancis, karena...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece01_l5.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 3,
             'soal' => "Tahun 1789 Revolusi Perancis berhasil menumbangkan absolut Monarchi dan menjadi Constituante monarchi serta digantikan Republik pada tahun 1792. Pada tahun 1799 rakyat menginginkan kembali absolutism dengan memuja Napoleon Bonaperte sebagai Kaisar Perancis dengan alasan...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece02_l5.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 1,
             'soal' => "Pengaruh perang kemerdekaan Amerika dari Inggris memberikan pengaruh kepada rakyat Perancis, yaitu...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece03_l5.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 1,
             'soal' => "Semboyan bangsa Perancis yang masuk dan berkembang di kalangan rakyat Hindia Belanda adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece04_l5.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 1,
             'soal' => "Pemerintahan terror pada masa Revolusi Perancis dipimpin oleh...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece05_l5.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 1,
             'soal' => "Sebab Khusus terjadinya Revolusi Perancis adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 1,
             'soal' => "Revolusi Perancis terjadi pada tahun...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece06_l5.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 1,
             'soal' => "Siapakah nama tokoh romantisme yang berpengaruh pada Revolusi Perancis?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 1,
             'soal' => "Kapan rakyat Perancis menyerbu dan merebut benteng Bastille?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 5,
             'sej11_waktu_id' => 2,
             'soal' => "Feodalisme membagi-bagi masyarakat dalam golongan-golongan yang berhak dan yang tidak berhak. Di Perancis ketika terdapat beberapa golongan, pada golongan berapakah kaum agama berada?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' =>null,
         ]);
 
         //level 6
@@ -1021,70 +1021,70 @@ class DatabaseSeeder extends Seeder
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 2,
             'soal' => "Pelopor terjadinya Revolusi Februari 1917 di Rusia yang berhasil menggulingkan kekuasaan Tsar Nicholas II adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece01_l6.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 1,
             'soal' => "Politik luar negeri Rusia yang terkenal adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece02_l6.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 1,
             'soal' => "Sebelum Revolusi Rusia meletus, muncul aliran-aliran yang menentang kekuasaan Tsar, salah satu aliran itu adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece03_l6.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 1,
             'soal' => "Pengaruh Revolusi Rusia di bidang ideologi adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece04_l6.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 1,
             'soal' => "Akibat Revolusi Rusia bagi dunia antara lain sebagai berikut, kecuali...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece05_l6.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 2,
             'soal' => "Faham yang mengatakan bahwa masyarakat ini telah terlanjur rusak dan tidak mungkin lagi dapat diperbaiki, karena itu harus dilenyapkan sama sekali. Kemudian setelah lenyap sama sekali, baru disusun masyarakat baru berdasarkan atas ratio. Pernyataan tersebut merupakan makna dari...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => "piece06_l6.png",
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 1,
             'soal' => "Kapan Revolusi Februari dimulai?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 1,
             'soal' => "Dimana Revolusi Oktober dimulai?",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 1,
             'soal' => "Salah satu pengaruh Revolusi Rusia di dunia adalah terjadinya persaingan antar paham komunis dengan paham demokrasi liberal menyebabkan terjadinya...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null,
         ]);
 
         sej11_soal::create([
             'sej11__level_id' => 6,
             'sej11_waktu_id' => 1,
             'soal' => "Pelopor terjadinya Revolusi Oktober 1917 di Rusia yang berhasil menggulingkan kekuasaan Mensjewiki adalah...",
-            'potongan_gambar' => "https://wallpaperaccess.com/full/169544.jpg",
+            'potongan_gambar' => null
         ]);
 
         
